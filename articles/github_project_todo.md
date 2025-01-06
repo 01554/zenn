@@ -3,7 +3,7 @@ title: "github ToDo"
 emoji: "⛳"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [github,ToDo,Workflow]
-published: false
+published: true
 ---
 
 お疲れ様です、波浪です
@@ -55,7 +55,8 @@ Setting -> Status
 ![](/images/github_project_todo/status.png)
 
 TODO管理に
-BacklogとかReviewはないので編集しておきます。
+BacklogとかReviewはないので編集して
+↓画像の感じにしておきます。
 
 ![](/images/github_project_todo/edit.png)
 ![](/images/github_project_todo/modify.png)
