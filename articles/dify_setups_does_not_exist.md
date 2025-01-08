@@ -3,7 +3,7 @@ title: "DifyをDockerで立ち上げたら relation dify_setups does not exist "
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [dify,docker]
-published: false
+published: true
 ---
 
 お疲れ様です、波浪です
