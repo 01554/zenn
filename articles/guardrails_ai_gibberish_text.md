@@ -15,7 +15,7 @@ https://generative-agents.connpass.com/event/342683/
 https://github.com/guardrails-ai/gibberish_text
 
 gibberish_textを実行したところ
-「Hello」が引っかかってしまう
+「Hello」という文言が引っかかってしまう
 
 という状況になっていたので何が起きていたのか確認してみました。
 
