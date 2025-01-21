@@ -3,7 +3,7 @@ title: "guardrails-aiのgibberish_textでHelloがガードされる"
 emoji: "⛳"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [guardrails-ai,gibberish_text]
-published: false
+published: true
 ---
 お疲れ様です、波浪です。
 
@@ -64,11 +64,7 @@ curl -X POST -H "Authorization: Bearer {HF_API_KEY}" -H "Content-Type: applicati
 こんな感じで「Clean」に含まれます
 
 https://github.com/guardrails-ai/gibberish_text/blob/ef04ad1529b657edf41fe23ddb45482bb1df1085/validator/main.py#L83
-```
-        if pred_label == "clean" and confidence > self._threshold:
-```
-このコードはラベル、cleanじゃないとfalseで失敗するので
-helloだと死んじゃうんですね。
+このコードはラベル:cleanじゃないと失敗するようになっているので、helloだと死んじゃうんですね。
 
 うーむ？ ま、日本語には使えなさそうなモデルなので使うことはないかな...
 
