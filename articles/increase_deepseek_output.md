@@ -3,7 +3,7 @@ title: "DeepSeekはすごいけどoutput_tokenが少ない、出力量を増や�
 emoji: "🙌"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [DeepSeekR1,gpt]
-published: false
+published: true
 ---
 
 お疲れ様です波浪です。
