@@ -3,7 +3,7 @@ title: "J-moshiをGoogleColab(L4)で動かす"
 emoji: "😸"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [colab,jmoshi,j_moshi,j-moshi]
-published: false
+published: true
 ---
 
 お疲れ様です、波浪です。
