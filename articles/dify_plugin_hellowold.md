@@ -7,7 +7,6 @@ published: false
 ---
 
 お疲れ様です波浪です。
-正直DifyよりLangChainの方が好きなんですが
 今日はDifyPlugin開発の話です。
 
 知らん人はまだ知らないと思いますが
