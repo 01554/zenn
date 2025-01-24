@@ -1,5 +1,5 @@
 ---
-title: "J-moshiをGoogleColab(L4)で動かす"
+title: "J-MoshiをGoogleColab(L4)で動かす"
 emoji: "😸"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [colab,jmoshi,j_moshi,j-moshi]
@@ -25,12 +25,12 @@ https://huggingface.co/nu-dialogue/j-moshi-ext
 ```
 pip install moshi
 python -m moshi.server --hf-repo nu-dialogue/j-moshi-ext
-
 ```
 のたった2Stepみたいです
 ただ
 ```
-実行には，24GB以上のVRAMを搭載したLinux GPUマシンが必要です．MacOSには対応していません．
+実行には，24GB以上のVRAMを搭載したLinux GPUマシンが必要です．
+MacOSには対応していません．
 ```
 
 とのことだったので家のGPUマシン使おうとしたら嫁さんが三國無双オリジンしてたんで
@@ -41,16 +41,18 @@ T4だとVRAM足りなそうなのでL4使います（L4は有料プランでし�
 あとColabだとGradioかなんかに繋がないといけないんですが
 
 ```
-実装の詳細は，オリジナルMoshiのリポジトリ kyutai-labs/moshi を参照してください．
+実装の詳細は，オリジナルMoshiのリポジトリ
+kyutai-labs/moshi を参照してください．
 ```
-ここで指示されているmoshiみたら、そのものズバリ
+githubで指示されているmoshiのリポジトリをみたら、
+そのものズバリ
 
 https://github.com/kyutai-labs/moshi?tab=readme-ov-file#python-pytorch:~:text=Start%20the%20server%20with%3A
 
 ```
 python -m moshi.server [--gradio-tunnel] [--hf-repo kyutai/moshika-pytorch-bf16]
 ```
-って書いてありました、たすかるぅ〜
+って --gradio-tunnelつけりゃええよ書いてありました、たすかるぅ〜
 
 実行するとモデルDLに少々待たされたあとに
 gradioのURLが発行されます
