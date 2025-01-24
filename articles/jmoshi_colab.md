@@ -59,8 +59,10 @@ gradioのURLが発行されます
 実行した動画をつけたいところなんですが
 zennに動画アップする方法がわからんのでgifだけはっときますね
 
-![](/images/jmoshi_colab/jmoshi.gif)
+。。。と思ったら上限の3MB超えてたんで すいませんがスクショだけ貼ります
+![](/images/jmoshi_colab/microphone.png)
+![](/images/jmoshi_colab/run.png)
 
-まあ、動画なんてみなくてもめちゃくちゃ簡単に試せるので
+まあ、動画なんてみなくても、やればめちゃくちゃ簡単に試せるので！！！
 みんなもLet's j-moshi ！！！！！
 
