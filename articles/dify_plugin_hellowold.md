@@ -178,3 +178,7 @@ helloworldノードの出力にさっきの
 }
 ```
 が入っていることが確認できました！！！やったぜ！！！！
+
+
+### 実際のコード
+https://github.com/01554/dify-plugin-helloworld
