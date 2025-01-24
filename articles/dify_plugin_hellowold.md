@@ -156,7 +156,7 @@ $ source .venv/bin/activate
 $ pip install -r requirements.txt
 $ python main.py
 ```
-![](/images/dify_plugin_hellowold/install.mov)
+![](/images/dify_plugin_hellowold/install.gif)
 
 インストール中はこんな感じでプラグインアイコンがうにょうにょします
 
@@ -172,5 +172,10 @@ $ python main.py
 ![](/images/dify_plugin_hellowold/trace.png)
 
 
-
-
+helloworldノードの出力にさっきの
+```
+{
+    "result": "Hello, world!"
+}
+```
+が入っていることが確認できました！！！やったぜ！！！！
