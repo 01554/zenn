@@ -2,7 +2,7 @@
 title: "Difyプラグインの作り方：HelloWorldするよ"
 emoji: "🌟"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [dify,plguin,v1.0.0]
+topics: [dify,plugin,v1_0_0_b]
 published: true
 ---
 
