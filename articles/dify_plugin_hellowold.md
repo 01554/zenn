@@ -1,5 +1,5 @@
 ---
-title: "[日本最速]DifyプラグインでHelloWorld"
+title: "Difyプラグインの作り方：HelloWorldするよ"
 emoji: "🌟"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [dify,plguin,v1.0.0]
