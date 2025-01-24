@@ -1,5 +1,5 @@
 ---
-title: "Difyプラグインの作り方：HelloWorldするよ"
+title: "Difyプラグインの作り方：HelloWorldPlugin作るよ"
 emoji: "🌟"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [dify,plugin,v1_0_0_b]
