@@ -1,5 +1,5 @@
 ---
-title: "Not蒸留物、本物のR1を1.58bit量子化したモデルを動かす（1500円/時)"
+title: "Not蒸留物、本物のDeepSeek R1を1.58bit量子化したモデルを動かす（1500円/時)"
 emoji: "💨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [deepseekR1,huggigface]
@@ -14,6 +14,8 @@ DeepSeek R1をローカルPCで動かしました！ドヤっっってしてる�
 
 そんな中ガチのDeepseek R1(model size 671B)の1.58bit量子化版がHFに登録されました。
 https://unsloth.ai/blog/deepseekr1-dynamic
+まあタイトルにあるような「本物」かと言われたら量子化はしてますけどね
+それでも蒸留モデルよりは本物ですわ。
 
 
 といっても、さすがに動かすためには最低でも24GBのVRAMと64GのRAMが必要です。
