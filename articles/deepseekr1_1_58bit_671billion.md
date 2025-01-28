@@ -1,18 +1,18 @@
 ---
-title: "Not蒸留物、本物のDeepSeek R1を1.58bit量子化したモデルを動かす（1500円/時)"
+title: "Not蒸留物、本物のDeepSeek-R1(671B)を1.58bit量子化したモデルを動かす（1500円/時)"
 emoji: "💨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [deepseekR1,huggigface]
 published: true
 ---
 
-# 皆に本物のDeepSeek R1を見せてあげますよ
+# 皆に本物のDeepSeek-R1を見せてあげますよ
 
 お疲れ様です、波浪です。
 
 DeepSeek R1をローカルPCで動かしました！ドヤっっってしてる記事がたくさんありますがその人たちが動かしているブツの大半はR1の蒸留物でサイズが13Bとかせいぜい70Bくらいなんですよね。
 
-そんな中ガチのDeepseek R1(model size 671B)の1.58bit量子化版がHFに登録されました。
+そんな中ガチのDeepseek-R1(model size 671B)の1.58bit量子化版がHFに登録されました。
 https://huggingface.co/unsloth/DeepSeek-R1-GGUF
 まあタイトルにあるような「本物」かと言われたら量子化はしてますけどね
 それでも蒸留モデルよりは本物ですわ。
