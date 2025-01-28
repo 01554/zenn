@@ -6,7 +6,7 @@ topics: [deepseekR1,huggigface]
 published: true
 ---
 
-# 皆に本物のDeepseek R1を見せてあげますよ
+# 皆に本物のDeepSeek R1を見せてあげますよ
 
 お疲れ様です、波浪です。
 
