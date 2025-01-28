@@ -13,7 +13,7 @@ published: true
 DeepSeek R1をローカルPCで動かしました！ドヤっっってしてる記事がたくさんありますがその人たちが動かしているブツの大半はR1の蒸留物でサイズが13Bとかせいぜい70Bくらいなんですよね。
 
 そんな中ガチのDeepseek R1(model size 671B)の1.58bit量子化版がHFに登録されました。
-https://unsloth.ai/blog/deepseekr1-dynamic
+https://huggingface.co/unsloth/DeepSeek-R1-GGUF
 まあタイトルにあるような「本物」かと言われたら量子化はしてますけどね
 それでも蒸留モデルよりは本物ですわ。
 
@@ -45,9 +45,11 @@ https://endpoints.huggingface.co/new?repository=unsloth%2FDeepSeek-R1-GGUF&vendo
 
 なお精度に関しては
 
+
+
 https://unsloth.ai/blog/deepseekr1-dynamic#:~:text=DeepSeek%20Original-,1.58%2Dbit%20Version,-We%20see%20surprisingly
 
-元のBLOGにありますが、多少落ちる程度です。
+この量子化モデル製作者unslothのBLOGにありますが、多少落ちる程度です。
 
 日本語に関しては今からやりますが
 取り急ぎ、驚き仕草しとこうと思ったんで記事をしたためた次第
