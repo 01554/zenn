@@ -49,7 +49,7 @@ https://endpoints.huggingface.co/new?repository=unsloth%2FDeepSeek-R1-GGUF&vendo
 
 https://unsloth.ai/blog/deepseekr1-dynamic#:~:text=DeepSeek%20Original-,1.58%2Dbit%20Version,-We%20see%20surprisingly
 
-この量子化モデル製作者unslothのBLOGにありますが、多少落ちる程度です。
+この量子化モデル製作者unslothさんのBLOGにありますが、多少は落ちます。
 
 日本語に関しては今からやりますが
 取り急ぎ、驚き仕草しとこうと思ったんで記事をしたためた次第
