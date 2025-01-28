@@ -3,7 +3,7 @@ title: "Not蒸留物、本物のR1を1.58bit量子化したモデルを動かす
 emoji: "💨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [deepseekR1,huggigface]
-published: false
+published: true
 ---
 
 # 皆に本物のDeepseek R1を見せてあげますよ
