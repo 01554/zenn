@@ -10,8 +10,7 @@ published: true
 
 お疲れ様です、波浪です。
 
-どうも世間には
-deepseek R1をローカルPCで動かしました！ドヤっっってしてる記事がたくさんありますがその人たちが動かしているブツの大半はR1の蒸留物でサイズが13Bとかせいぜい70Bくらいなんですよね。
+DeepSeek R1をローカルPCで動かしました！ドヤっっってしてる記事がたくさんありますがその人たちが動かしているブツの大半はR1の蒸留物でサイズが13Bとかせいぜい70Bくらいなんですよね。
 
 そんな中ガチのDeepseek R1(model size 671B)の1.58bit量子化版がHFに登録されました。
 https://unsloth.ai/blog/deepseekr1-dynamic
@@ -31,13 +30,13 @@ https://x.com/ggerganov/status/1883961201371042120
 https://endpoints.huggingface.co/new?repository=unsloth%2FDeepSeek-R1-GGUF&vendor=aws&region=us-east-1&accelerator=gpu&instance_id=aws-us-east-1-nvidia-l40s-x4&task=text-generation&no_suggested_compute=true&env_LLAMA_ARG_CACHE_TYPE_K=q8_0&env_LLAMA_ARG_UBATCH=64
 
 
-これはつまり、HugginfFaceにクレジットカード登録しておけば
+これはつまり、HuggingFaceにクレジットカード登録しておけば
 ボタン一発でR1(1.58Bit)を試させてやるよと
 なお金額は $ 8.3 /h だ
 
 と、まあ、そういうわけですね。
 
-ぶっちゃけhuggigfaceにクレジットカードちゃんと登録してあとはボタン押すだけなんで、なんも説明することはないんですが
+ぶっちゃけhuggigFaceにクレジットカードちゃんと登録してあとはボタン押すだけなんで、なんも説明することはないんですが
 
 実際に動かすとこれくらいの速度でtokenがでたんで実用可能レベルですね。
 ![](/images/r1_158/480run.gif)
