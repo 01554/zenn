@@ -1,0 +1,9 @@
+title: "再入門 LangChain/LangGraph"
+summary: "昔少しだけ使ったけどやめちゃったLangChainに今更再入門します"
+topics: []
+published: false
+price: 500 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - example1
+  - example2
