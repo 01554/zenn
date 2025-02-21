@@ -10,7 +10,10 @@ published: false
 お疲れ様です波浪です。
 
 愛機MacBookPro14inchのSSDが枯渇したのでJetDriveLite330を買ったんですが
-こいつ、MacBook専用設計の癖にEx-FATでフォーマットされています。
+
+https://jp.transcend-info.com/product/memory-card/jetdrive-lite-330
+
+こいつ、MacBook専用設計の癖に出荷時はEx-FATでフォーマットされています。
 
 これのせいで OrbStackのストレージフォルダをJetDriveLiteに設定しようとすると
 `validate data dir: data storage location must be formatted as APFS`
