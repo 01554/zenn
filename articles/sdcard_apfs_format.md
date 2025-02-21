@@ -9,7 +9,7 @@ published: false
 
 お疲れ様です波浪です。
 
-愛機MacBookPro14inchのSSDが枯渇したのでJetDriveLite330を買ったんですが
+愛機MacBookPro14のSSDが枯渇したのでJetDriveLite330を買ったんですが
 
 https://jp.transcend-info.com/product/memory-card/jetdrive-lite-330
 
