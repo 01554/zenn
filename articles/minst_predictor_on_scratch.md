@@ -241,7 +241,7 @@ Geminiに聞くと二次元配列とかlist_i で問い合わせる事ができ�
 
 なのでグローバル変数に結果を書き込む手法になります。
 
-![](/images/minst_predictor_on_scratch/step11.png)
+![](/images/minst_predictor_on_scratch/dot.png)
 
 そういえば途中のlayer構造ですが、スクラッチでは一次元配列しか使えないので組むの面倒になりそうだなと思い
 
