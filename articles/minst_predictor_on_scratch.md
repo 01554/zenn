@@ -255,7 +255,7 @@ Python上での精度評価では 10epoch回して 80％超えてるしScratch�
 ## hidden_1
 はい、以下は見たままですね。
 先ほども書いた通りReturnは無いので、グローバルに用意したリストへ出力は書き込んでいきます。（H1_outputですね）
-![](/images/minst_predictor_on_scratch/step14.png)
+![](/images/minst_predictor_on_scratch/step14_.png)
 W1_col_0 から W1_col_7 まで用意していますが
 これも初めに書いた通り、 W1_col_i でアクセスできりゃもっと簡単に書けるんですがスクラッチではできません。
 なので一次元配列にflat化してindex操作で処理するか
@@ -266,14 +266,14 @@ SUM_DOTは正直なくてもよかったなと思っていますが、先に作�
 
 ## hidden_2
 特に言う事なし
-![](/images/minst_predictor_on_scratch/step15.png)
+![](/images/minst_predictor_on_scratch/Step15_.png)
 
 ## output
 特に言う事なし
-![](/images/minst_predictor_on_scratch/step16.png)
+![](/images/minst_predictor_on_scratch/Step16_.png)
 
 ## 出力
-![](/images/minst_predictor_on_scratch/step17.png)
+![](/images/minst_predictor_on_scratch/Step17_.png)
 出力ですが、ただの推論機なんでSoftmax外して一番大きい値を採用しています。
 
 スクラッチには四則演算しかないので、指数関数の計算がさすがに面倒だしそもそも推論機にSoftmaxいらねえわということで外しました
