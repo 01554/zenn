@@ -31,7 +31,7 @@ published: false
 
 一応MNISTとか3層ニューラルネットワークの参考書籍を置いときます
 https://www.oreilly.co.jp/books/9784873117584/
-![](/images/MNIST_predictor_on_scratch/zero.png)
+![](/images/mnist_predictor_on_scratch/zero.png)
 
 
 
@@ -43,7 +43,7 @@ https://scratch.mit.edu/projects/1250300287/
 出てきた入力欄に0から9の数字をいれて「すいろん」ボタンを押してください
 
 うまくいけば、書いた数字をあててくれます。
-![](/images/MNIST_predictor_on_scratch/start.gif)
+![](/images/mnist_predictor_on_scratch/start.gif)
 
 
 
@@ -68,8 +68,8 @@ MNISTは28x28の画像を入力にしたネットワークです
 
 ## スプライトの作り方
 
-![](/images/MNIST_predictor_on_scratch/Step1.png)
-![](/images/MNIST_predictor_on_scratch/Step2.png)
+![](/images/mnist_predictor_on_scratch/Step1.png)
+![](/images/mnist_predictor_on_scratch/Step2.png)
 
 初期画面の左上にある「コスチューム」を押してから、画面右下の猫のアイコンにマウスオーバーします。
 
@@ -130,7 +130,7 @@ MNISTは28x28の画像を入力にしたネットワークです
 
 なので、緑の旗が押された時 から始めていきます。
 
-![](/images/MNIST_predictor_on_scratch/Step4.png)
+![](/images/mnist_predictor_on_scratch/Step4.png)
 
 コードはこんなんですね、これで緑の旗を押すととりあえず配置してくれるんですが、当然初めに作ったスプライトは大きさの調整がされてないのでめちゃくちゃな状態だったと思います。
 
@@ -162,7 +162,7 @@ MNISTは28x28の画像を入力にしたネットワークです
 
 
 ## 黒いスプライトを作成
-![](/images/MNIST_predictor_on_scratch/Step5.png)
+![](/images/mnist_predictor_on_scratch/Step5.png)
 
 はい、入力欄の配置が終わってから反転したスプライトを用意します。
 配置が終わってからじゃないと複製したスプライトと元のスプライトのサイズを合わせる作業が入るので面倒です、先に配置をしてから複製しましょう。
@@ -174,19 +174,19 @@ MNISTのデフォルトに合わせる人は黒背景で押されたら白にな
 ## 押された時のコード
 さて、押されたらといいましたが実際はぽちぽちおして入力するのは体験が悪いのでマウスでなぞると黒くなるようにします。
 
-![](/images/MNIST_predictor_on_scratch/Step6.png)
+![](/images/mnist_predictor_on_scratch/Step6.png)
 
 ここに「ドラッグできないようにする」というブロックがありますね。
 
 でもどうやってもマウスで動かせちゃうんですよねこのスプライト達
 
-![](/images/MNIST_predictor_on_scratch/step7.gif)
+![](/images/mnist_predictor_on_scratch/step7.gif)
 
 
 これどうやら、スクラッチの仕様らしく
 
 「ドラッグできないようにする」 が有効になるのは画面右上の
-![](/images/MNIST_predictor_on_scratch/step8.png)
+![](/images/mnist_predictor_on_scratch/step8.png)
 この 拡大ボタンを押した時だけなんですね。
 
 そ・ん・な・ん・わかるか！！！！！！
@@ -208,12 +208,12 @@ AIに聞くと二次元配列とかlist_i で問い合わせる事ができる�
 
 適当にスプライトを作って、その中に以下のコードを書きます。
 
-![](/images/MNIST_predictor_on_scratch/step9.png)
+![](/images/mnist_predictor_on_scratch/step9.png)
 
 
 この「送信を送る」がイベントリガーですね、このメッセージを受けて入力欄スプライトに以下のコードを追加して、入力欄のデータをリストに入れます。
 
-![](/images/MNIST_predictor_on_scratch/step10.png)
+![](/images/mnist_predictor_on_scratch/step10.png)
 
 さて、ここでエンジニアとしてはめちゃくちゃ気持ち悪い感じがしますね
 
@@ -241,13 +241,13 @@ AIに聞くと二次元配列とかlist_i で問い合わせる事ができる�
 
 なのでグローバル変数に結果を書き込む手法になります。
 
-![](/images/MNIST_predictor_on_scratch/dot.png)
+![](/images/mnist_predictor_on_scratch/dot.png)
 
 そういえば途中のlayer構造ですが、スクラッチでは一次元配列しか使えないので組むの面倒になりそうだなと思い
 
 14x14(196)→　8 → 4 → 10 にしました。
 
-![](/images/MNIST_predictor_on_scratch/step12.png)
+![](/images/mnist_predictor_on_scratch/step12.png)
 
 Python上での精度評価では 10epoch回して 80％超えてるしScratchでやるんだから 10％超えてりゃ別にいいんちゃうか
 くらいのノリでめっちゃ縮小化してます。
@@ -255,7 +255,7 @@ Python上での精度評価では 10epoch回して 80％超えてるしScratch�
 ## hidden_1
 はい、以下は見たままですね。
 先ほども書いた通りReturnは無いので、グローバルに用意したリストへ出力は書き込んでいきます。（H1_outputですね）
-![](/images/MNIST_predictor_on_scratch/Step14_.png)
+![](/images/mnist_predictor_on_scratch/Step14_.png)
 W1_col_0 から W1_col_7 まで用意していますが
 これも初めに書いた通り、 W1_col_i でアクセスできりゃもっと簡単に書けるんですがスクラッチではできません。
 なので一次元配列にflat化してindex操作で処理するか
@@ -266,14 +266,14 @@ DOTの関数は正直なくてもよかったなと思っていますが、先�
 
 ## hidden_2
 特に言う事なし
-![](/images/MNIST_predictor_on_scratch/Step15_.png)
+![](/images/mnist_predictor_on_scratch/Step15_.png)
 
 ## output
 特に言う事なし
-![](/images/MNIST_predictor_on_scratch/Step16_.png)
+![](/images/mnist_predictor_on_scratch/Step16_.png)
 
 ## 出力
-![](/images/MNIST_predictor_on_scratch/Step17_.png)
+![](/images/mnist_predictor_on_scratch/Step17_.png)
 出力ですが、ただの推論機なんでSoftmax外して一番大きい値を採用しています。
 
 スクラッチには四則演算しかないので、指数関数の計算がさすがに面倒だしそもそも推論機にSoftmaxいらねえわということで外しました
