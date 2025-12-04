@@ -186,7 +186,7 @@ MINSTのデフォルトに合わせる人は黒背景で押されたら白にな
 これどうやら、スクラッチの仕様らしく
 
 「ドラッグできないようにする」 が有効になるのは画面右上の
-![](/images/minst_predictor_on_scratch/step8.gif)
+![](/images/minst_predictor_on_scratch/step8.png)
 この 拡大ボタンを押した時だけなんですね。
 
 そ・ん・な・ん・わかるか！！！！！！
