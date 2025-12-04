@@ -1,5 +1,5 @@
 ---
-title: "MINSTの予測機をスクラッチに似せる"
+title: "MINSTの予測機をスクラッチで書く"
 emoji: "💬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [scratch,minst,DNN]
