@@ -255,7 +255,7 @@ Python上での精度評価では 10epoch回して 80％超えてるしScratch�
 ## hidden_1
 はい、以下は見たままですね。
 先ほども書いた通りReturnは無いので、グローバルに用意したリストへ出力は書き込んでいきます。（H1_outputですね）
-![](/images/minst_predictor_on_scratch/step14_.png)
+![](/images/minst_predictor_on_scratch/Step14_.png)
 W1_col_0 から W1_col_7 まで用意していますが
 これも初めに書いた通り、 W1_col_i でアクセスできりゃもっと簡単に書けるんですがスクラッチではできません。
 なので一次元配列にflat化してindex操作で処理するか
