@@ -1,8 +1,8 @@
 ---
-title: "MNIST on Scratch DeepDive"
+title: "MNIST(3層NN) on Scratch DeepDive"
 emoji: "💬"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [scratch,MNIST,DNN]
+topics: [scratch,MNIST,ML]
 published: false
 ---
 
@@ -36,7 +36,7 @@ https://www.oreilly.co.jp/books/9784873117584/
 
 
 # 出来上がるもの
-https://scratch.mit.edu/projects/1250300287/
+https://scratch.mit.edu/projects/1252363057
 
 緑の旗を押すと入力欄が出てきます（出るまでに少しかかります）
 
