@@ -6,6 +6,10 @@ topics: [scratch,MNIST,ML]
 published: false
 ---
 
+この記事は[株式会社ガラパゴス（有志） Advent Calendar 2025
+](https://qiita.com/advent-calendar/2025/galapagos)の10日目です
+
+
 お疲れ様です波浪です。
 
 前回はScratch3.0側のコードができたので今度は重みをPythonで作って移植します
@@ -28,7 +32,7 @@ Pythonコードはこれです。
 前回作った入力は白背景に黒文字、かつ 0/1の2値
 
 
-よって元画像を修正して、白背景、0,1 の2値にします
+よって元画像を修正して、白背景、0/1 の2値にします
 
 
 また スクラッチ側は14x14の入力なので、学習画像28x28を縮小します。
@@ -42,7 +46,7 @@ Pythonコードはこれです。
 
 というわけで上記の処理をしているのがこれ
 
-```
+```python
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 def preprocess_binary(images, threshold=0.5):
@@ -83,19 +87,18 @@ x_test_bin  = preprocess_binary(x_test)
 #  ラベルを One-Hot Encoding に
 y_train_one_hot = tf.keras.utils.to_categorical(y_train, num_classes=10)
 y_test_one_hot  = tf.keras.utils.to_categorical(y_test, num_classes=10)
-```
+```python
 
 ただ、この処理をした後の画像も
 ![](/images/mnist_predictor_on_scratch/step19.png)
 
 こんな感じでスクラッチの入力欄で書く数字とは太さとか形がかなり違う感じなのであまり精度が上がらないと思います。
 
-まあスクラッチ上でNNできればよしとします。
 
 
 ## モデル定義
 コード的には前後しますが モデル定義は以下の通り
-```
+```python
 # --- モデル定義 ---
 model = Sequential([
     Flatten(input_shape=(14,14)),    # 14x14 → 196
@@ -110,13 +113,13 @@ model.compile(
     metrics=['accuracy']
 )
 
-```
+```python
 196(14x14) →　8 →　4 →　10
 
 スクラッチで実装するにあたって表現を簡易にするため極めて小さなモデルにしています。
 
 ## 重みの出力
-```
+```python
 # 重みの抽出
 weights = {}
 
@@ -169,7 +172,7 @@ def export_weights_flat(weights_dict, output_file='/content/drive/MyDrive/scratc
 
 export_weights_flat(weights)
 
-```
+```python
 こちらのコードで 重みを一次元配列にしてGoogleドライブに出力しています。
 
 W1 → B1 →　W2 →　B2 →　W3 →B3
@@ -199,7 +202,7 @@ W1 → B1 →　W2 →　B2 →　W3 →B3
 この処理があるからモデルを小さくしたんですが、バックプロパゲーションまで考えるならweightのまま扱えるように毎回スライスして処理するように組み直す方が良いです。
 
 
-とりあえず推論する事が目的だし22個程度なので今回はこのままでいきます。
+とりあえず推論する事が目的だし40個程度なので今回はこのままでいきます。
 
 順番は 先ほど書いた通り
 
@@ -222,9 +225,15 @@ W1 → B1 →　W2 →　B2 →　W3 →B3
 
 はい、というわけで完成です。
 
+https://scratch.mit.edu/projects/1252363057/
+
+
 Python上でのテスト精度は80％超えていますが、学習画像とは実際に入力できる数字の形や形式がかなり違うので
 
-スクラッチ上の体感は40％くらいですね...
+スクラッチ上の体感は40％くらいですね、学習画像の質をあげるか、入力欄をfloat入力できるようにするともっと精度が上がりそうな気がします。
+
+マウスがスプライトに触れてる時の距離や時間をとれればそれをfloatにできるかな？
+
 
 以上、3層ニューラルネットワークをScratch3.0で組んでみた でした。
 
