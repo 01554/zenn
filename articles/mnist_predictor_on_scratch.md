@@ -1,5 +1,5 @@
 ---
-title: "MNIST(3層NN) on Scratch DeepDive"
+title: "3層ニューラルネットワークでMNIST on Scratch 3.0"
 emoji: "💬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [scratch,MNIST,ML]
