@@ -170,14 +170,11 @@ export_weights_flat(weights)
 
 ```
 こちらのコードで 重みを一次元配列にしてGoogleドライブに出力しています。
-
-W1 → B1 →　W2 →　B2 →　W3 →B3
-
+`W1 → B1 →　W2 →　B2 →　W3 →B3`
 の順で直列に出力します。
 
-
 `/content/drive/MyDrive/scratch_weights_flat.csv`
-に出力してあるので、これを DLしておいてください
+に出力してあるので、これを DLして移植します。
 
 ![](/images/mnist_predictor_on_scratch/step20.png)
 
@@ -186,7 +183,7 @@ W1 → B1 →　W2 →　B2 →　W3 →B3
 # Scratch 側で 重みの初期化
 スクラッチ側にリストを作って 名前を weight にします。
 
-画面上に リストが表示されので右クリックから「読み込み」 を選択することで csvや改行区切りのテキストをリストに読み込めます。
+画面上に リストが表示されるので右クリックから「読み込み」 を選択することで csvや改行区切りのテキストをリストに読み込めます。
 ![](/images/mnist_predictor_on_scratch/step21.png)
 
 ## 重みの切り出し
@@ -200,7 +197,7 @@ W1 → B1 →　W2 →　B2 →　W3 →B3
 とりあえず推論する事が目的だし40個程度なので今回はこのままでいきます。
 
 順番は 先ほど書いた通り
-`W1 → B1 →　W2 →　B2 →　W3 →B3`
+`W1 → B1 →　W2 →　B2 →　W3 → B3`
 の順です
 
 ![](/images/mnist_predictor_on_scratch/step22.png)
