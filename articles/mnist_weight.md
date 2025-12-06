@@ -216,6 +216,9 @@ export_weights_flat(weights)
 
 https://scratch.mit.edu/projects/1252363057/
 
+![](/images/mnist_predictor_on_scratch/start.gif)
+
+
 
 Python上でのテスト精度は80％超えていますが、学習画像とは実際に入力できる数字の形や形式がかなり違うので
 
