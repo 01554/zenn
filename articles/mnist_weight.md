@@ -23,17 +23,13 @@ https://zenn.dev/galapagos/articles/mnist_predictor_on_scratch
 https://colab.research.google.com/drive/1sRpvkPIC63ZNmgjg7ydhvIFXezyiI6s8?usp=sharing
 
 Pythonコードはこれです。
-
 注意点がいくつかあるので書いてきます。
 
 ## 学習画像の調整
 まず学習画像ですが、MNISTは黒背景に白い文字でfloatになっています。
 
 前回作った入力は白背景に黒文字、かつ 0/1の2値
-
-
 よって元画像を修正して、白背景、0/1 の2値にします
-
 
 また スクラッチ側は14x14の入力なので、学習画像28x28を縮小します。
 
@@ -87,7 +83,7 @@ x_test_bin  = preprocess_binary(x_test)
 #  ラベルを One-Hot Encoding に
 y_train_one_hot = tf.keras.utils.to_categorical(y_train, num_classes=10)
 y_test_one_hot  = tf.keras.utils.to_categorical(y_test, num_classes=10)
-```python
+```
 
 ただ、この処理をした後の画像も
 ![](/images/mnist_predictor_on_scratch/step19.png)
@@ -113,7 +109,7 @@ model.compile(
     metrics=['accuracy']
 )
 
-```python
+```
 196(14x14) →　8 →　4 →　10
 
 スクラッチで実装するにあたって表現を簡易にするため極めて小さなモデルにしています。
@@ -172,7 +168,7 @@ def export_weights_flat(weights_dict, output_file='/content/drive/MyDrive/scratc
 
 export_weights_flat(weights)
 
-```python
+```
 こちらのコードで 重みを一次元配列にしてGoogleドライブに出力しています。
 
 W1 → B1 →　W2 →　B2 →　W3 →B3
@@ -198,16 +194,13 @@ W1 → B1 →　W2 →　B2 →　W3 →B3
 自分は W1_col_1 W1_col_2...
 
 と列ごとにリストを作ってしまっているため、スライスしていきます。
-
 この処理があるからモデルを小さくしたんですが、バックプロパゲーションまで考えるならweightのまま扱えるように毎回スライスして処理するように組み直す方が良いです。
 
 
 とりあえず推論する事が目的だし40個程度なので今回はこのままでいきます。
 
 順番は 先ほど書いた通り
-
-W1 → B1 →　W2 →　B2 →　W3 →B3
-
+`W1 → B1 →　W2 →　B2 →　W3 →B3`
 の順です
 
 ![](/images/mnist_predictor_on_scratch/step22.png)
@@ -216,7 +209,6 @@ W1 → B1 →　W2 →　B2 →　W3 →B3
 リストはグローバル変数なので
 
 すいろん スプライトにこの初期化処理を紐づける理由がありません、なので自分は別スプライトにしました。
-
 
 ちなみに関数定義は直接クリックすると動作します、weightリストに重みをtxtから読み込むために直接マウス操作が必要なので ここは完全手動で 重みの初期化 定義もマウスクリックで動かしておきます。
 
