@@ -159,9 +159,9 @@ https://zenn.dev/galapagos/articles/mnist_predictor_on_scratch#%E5%87%BA%E5%8A%9
 
 ![](/images/debug_backpropagation/softmax2.png)
 
-(`actvations` の `offset+j`) を (`exp_vals` の `j` 番目) / `exp_sum` で置き換える
+(`activations` の `offset+j`) を (`exp_vals` の `j` 番目) / `exp_sum` で置き換える
 
-一つ目のリストである actvations　は offsetが足されてるけど、二つ目のリストである exp_valsには offsetがない
+一つ目のリストである activations　は offsetが足されてるけど、二つ目のリストである exp_valsには offsetがない
 
 ....あゝ嗚呼....
 ........あゝ嗚呼....
@@ -219,7 +219,7 @@ https://zenn.dev/galapagos/articles/mnist_predictor_on_scratch#%E5%87%BA%E5%8A%9
 
 レイヤー構造は
 `INPUT(196) - hidden_1(8) - hidden_2(4) - output(10) `
-lerning_rate が 0.1、epoch 10
+learning_rate が 0.1、epoch 10
 でした。
 
 ## 使い方
