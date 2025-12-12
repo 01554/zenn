@@ -1,5 +1,5 @@
 ---
-title: "Scratch3.0で誤差逆伝播法を実装してMNISTの学習をする"
+title: "Scratch3.0で誤差逆伝播法を実装してMNISTの学習をする day3"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ml,nn,Scratch]
@@ -218,15 +218,6 @@ p_w_offsetがW2のことを指していれば
 W1変数にW1のオフセットいれといて、あ、いやそれだと動的にできないんだった。うーん
 動的レイヤー構成がよくない、できそうだしやっちゃお！なんて軽い気持ちでやるべきではなかったわ。
 
-### delta_offset
-仮に 順伝播が
-`input → hidden1 → hidden2 → output `
-の時Δは
-`outputΔ → hidden2Δ → hidden1Δ`
-の順で 作られるので、それを取り出すためのdelta_offsetの位置取得関数です。
-
-![](/images/backpropagation_on_scratch/train/delta_offset.png)
-
 ### u_max_output_z
 expのテーブルが自分の雑に作った範囲なので、なるべく収まりがよくなるように最大値を引いていく
 つまり`exp(z_i - max) / Σexp(z_j - max)`の maxを取得するための関数です。
@@ -253,5 +244,130 @@ w = w - learning_rate * grad
 ![](/images/backpropagation_on_scratch/train/train_load_sample.png)
 
 test_loadもほぼ同じ、読み出し元が違うだけなのでtest側は省略
+
+
+## 順伝播
+はい、順伝播に必要なutilは終わったんで 順伝播を組んでいきます。
+にしてもScratchでutil作ってるとめっちゃ飽きてきますね、やっぱ数学苦手なんだなぁ...
+
+前々回にも言った通りMNISTや学習自体の説明は今回しません
+
+![](/images/backpropagation_on_scratch/fwd/s1.png)
+
+そしてここまでくると説明するほどのことがないんですよね
+p_wやp_bに今回使うwやbのoffset記述して、それぞれのサイズ書いて次実行してるだけですからね
+スライス処理のために書いてる部分除いたらまじ単純な順伝播です。
+
+![](/images/backpropagation_on_scratch/fwd/s2.png)
+これも、1ニューロンずつ処理してるだけでやってることはDOTとって、活性化関数通してその値をactivationsに保存してるだけです。
+普段と違うのは初めにも書きましたがReLUで作ったら数字が爆発してNaNになっちゃったのと、exp/logが先に計算しておいた範囲しかだせない制限があるため、その範囲内に収めるためにsigmoidにしているくらいです。
+
+![](/images/backpropagation_on_scratch/fwd/s3.png)
+![](/images/backpropagation_on_scratch/fwd/s4.png)
+![](/images/backpropagation_on_scratch/fwd/s5.png)
+前回は平均誤差で誤魔化してましたがexp/logを実装したおかげでsoftmaxが使えるようになり
+さらにいつも通りになりましたね。
+
+はい、順伝播はこれで終わり。
+
+## 逆伝播用util
+次から 逆伝播に必要なutilを組んでいきましょう
+といっても、残りは勾配計算だけですが
+
+![](/images/backpropagation_on_scratch/util/util_grad.png)
+
+biasはコピーするだけなので説明不要、
+引数はどっちもスライス用のoffsetとそれぞれの行列サイズを送りつけてるだけです。
+
+重みの勾配は `∂L/∂W[i,j] = a[i] × δ[j]`
+
+ところで、このスクラッチの画面よく見てほしいんですがループカウンタにした i と j ってめっちゃ区別つきにくくないですか？ 
+
+なんでiとjを数式に使ったんだ、バグの温床なので 連続する数式にiとjを採用したやつまじどうにかなってほしい、大切な場面で必ず鼻毛が「こんにちはー」って見えちゃう呪いとかかかってほしい。
+
+ついでに + と * も区別つきにくいので どうにかしてほしい。Scratch画面のフォント変えたい
+
+
+### get_delta_offset
+仮に 順伝播が
+`input → hidden1 → hidden2 → output `
+の時Δは
+`outputΔ → hidden2Δ → hidden1Δ`
+の順で 作られるので、それを取り出すためのdelta_offsetの位置取得関数です。
+
+![](/images/backpropagation_on_scratch/train/delta_offset.png)
+
+
+### 逆伝播
+
+
+さて、逆伝播を汲んでいきますが、順伝播を下から汲んでいって正直きつかったんで今度は上から組みます。
+正直ボトムアップ型苦手かも...
+いやまあこれ逆に上から組んでいったらできるのか？って言われたら、うーん、まあデバッグがさらにキツかったと思う。
+
+つーわけで愚痴り終わり、次は上から組みます
+
+
+
+![](/images/backpropagation_on_scratch/bwd/bwd1.png)
+
+はい、こんなんでしょ、いやー美しい。
+説明不要なの嬉しいです
+
+### 出力層更新
+
+![](/images/backpropagation_on_scratch/bwd/s7.png)
+途中のオレンジの箱は全部offset位置を引数として渡すための処理です。
+定数にしときゃこんなもん全部不要です。
+なんで動的レイヤーなんて挑戦しちゃったんだ...
+まあそれも後少しです。
+
+![](/images/backpropagation_on_scratch/bwd/output_差分.png)
+はい、メインのΔ計算部分ですね。
+ちょっと前にも書いてますがdeltaを逆伝播の順に更新していきます。
+つまり出力層が1番目で、次に隠れ層_n n-1 ... 隠れ層_1と格納していきます。
+
+### 隠れ層更新
+
+![](/images/backpropagation_on_scratch/bwd/s8.png)
+これも途中のオレンジの箱はoffset位置か、グローバル変数に引数を設定しているものです。
+
+
+![](/images/backpropagation_on_scratch/bwd/hidden_差分.png)
+hidden_layer のΔ計算ですね。
+
+ある意味今回のメインなんですが、ここまで書いてきたことを組み合わせているだけなので、特段説明するべきことがないですね。
+引数をグローバル変数にいれてるせいでオレンジの箱が多くてみにくいだけで、そこを除けば差分計算して、更新してるだけの普段通りのやつです。
+
+### update_weight
+というわけで更新した重みで更新します
+
+![](/images/backpropagation_on_scratch/bwd/s11.png)
+
+なんで s11なの？ s9じゃないのと思った方がいたらするどい。
+
+元は差分更新関数にもstepがついていたからで、隠れ層更新がs9だからです
+じゃあなんでそこ消したんだって言われたら、更新関数を一個に共通化しようとあれこれいじっていたけど、読みづらかったんで元にもどしたからです！！！
+
+それならs11もs9にしろよって思った方、あなたはレビュワーの才能があります。
+
+だって、隠れ層更新は s9_ってついてる変数使ってんだもん... 直すと被るじゃん... ごめん...
+
+
+## 完成
+と、いうわけで完成しました わーぱちぱちぱち。
+
+
+![](/images/backpropagation_on_scratch/connect/train_one.png)
+
+はい、早速回してみましょう。
+
+![](/images/backpropagation_on_scratch/connect/train_one_test.png)
+
+あーーーーー..... 重みの上の方が更新されてないですね...
+下の方は更新されているので、勾配計算が届いてない
+まあ、それでも一部は更新されているので、どっかのアホが動的にしたせいでoffsetがずれてるんでしょうな、勾配消失の可能性もあるかな？はー、ほんとアホは最後の最後まで問題を残す
+というわけで今日はここまで、次回はデバッグ作業です！
+
 
 
