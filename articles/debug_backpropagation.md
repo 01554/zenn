@@ -1,10 +1,15 @@
 ---
 title: "Scratch3.0で誤差逆伝播法を実装 day4 動いたけどバグってた、デバッグするぜ "
-emoji: "🐷"
+emoji: "💯"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ml,nn,Scratch]
 published: false
 ---
+
+この記事は[株式会社ガラパゴス（有志） Advent Calendar 2025](https://qiita.com/advent-calendar/2025/galapagos)の19日目です
+
+
+
 
 お疲れ様です、波浪です。
 
@@ -301,3 +306,18 @@ https://scratch.mit.edu/projects/1253455000
 
 
 ＼＼＼＼天才！！！／／／／
+
+
+
+#### Link
+day1
+https://zenn.dev/galapagos/articles/mnist_predictor_on_scratch
+
+day2
+https://zenn.dev/galapagos/articles/mnist_weight
+
+day3 
+https://zenn.dev/articles/backpropagation_on_scratch
+
+day4
+本記事

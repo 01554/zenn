@@ -6,6 +6,9 @@ topics: [ml,nn,Scratch]
 published: false
 ---
 
+この記事は[株式会社ガラパゴス（有志） Advent Calendar 2025](https://qiita.com/advent-calendar/2025/galapagos)の18日目です
+
+
 お疲れ様です、波浪です。
 
 さて、前回、前々回はScratch3.0で推論機を作ってPythonで学習した重みを移植することで実装しました。
@@ -370,4 +373,14 @@ hidden_layer のΔ計算ですね。
 というわけで今日はここまで、次回はデバッグ作業です！
 
 
+
+#### Link
+day1
+https://zenn.dev/galapagos/articles/mnist_predictor_on_scratch
+
+day2
+https://zenn.dev/galapagos/articles/mnist_weight
+
+day3 
+本記事
 
