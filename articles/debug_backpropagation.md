@@ -61,7 +61,7 @@ day1の頃はここに「i」が設定されていて
 
 というわけでここをactivationsに修正
 
-![](/images/debug_backpropagation/debug2.png)
+![](/images/debug_backpropagation/debug2_.png)
 
 
 前回更新できてなかったweightの上の方が更新されるか確認します
