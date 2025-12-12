@@ -228,7 +228,7 @@ expのテーブルが自分の雑に作った範囲なので、なるべく収�
 ### u_argmax
 np.argmaxです。
 
-![](/images/backpropagation_on_scratch/train/argmax.png)
+![](/images/backpropagation_on_scratch/train/argmax2.png)
 
 
 ### 勾配降下法
