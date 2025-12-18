@@ -13,10 +13,18 @@ published: false
 
 さて、前回、前々回はScratch3.0で推論機を作ってPythonで学習した重みを移植することで実装しました。
 
+day1 Scratch推論機
+https://zenn.dev/galapagos/articles/mnist_predictor_on_scratch
+
+day2 重みの作成とScratchへの移植
+https://zenn.dev/galapagos/articles/mnist_weight
+
+
+
 ここまできたらやるしかないですね、誤差逆伝播法をScratchで実装です。
 
 
-ただ、現在のコードを拡張したら無事バグだらけになったので一から作り直します。
+ただ、day1,day2のコードを拡張したら無事バグだらけになったので一から作り直します。
 いままでの俺はスクラッチ初心者でしたが、今なら初級者くらいにはなってますからね！！
 
 ## 改善方針
@@ -366,6 +374,7 @@ hidden_layer のΔ計算ですね。
 はい、早速回してみましょう。
 
 ![](/images/backpropagation_on_scratch/connect/train_one_test.png)
+![](/images/backpropagation_on_scratch/connect/train_one_test.gif)
 
 あーーーーー..... 重みの上の方が更新されてないですね...
 下の方は更新されているので、勾配計算が届いてない
@@ -383,4 +392,10 @@ https://zenn.dev/galapagos/articles/mnist_weight
 
 day3 
 本記事
+
+day4
+
+
+最終的に完成する誤差逆伝播をScratchの標準機能だけで実装したやつ
+https://scratch.mit.edu/projects/1253455000/
 
