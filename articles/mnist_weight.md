@@ -6,8 +6,7 @@ topics: [scratch,MNIST,ML]
 published: false
 ---
 
-この記事は[株式会社ガラパゴス（有志） Advent Calendar 2025
-](https://qiita.com/advent-calendar/2025/galapagos)の10日目です
+この記事は[株式会社ガラパゴス（有志） Advent Calendar 2025](https://qiita.com/advent-calendar/2025/galapagos)の10日目です
 
 
 お疲れ様です波浪です。
@@ -229,3 +228,19 @@ Python上でのテスト精度は80％超えていますが、学習画像とは
 
 以上、3層ニューラルネットワークをScratch3.0で組んでみた でした。
 
+
+#### Link
+day1 ScratchでMNIST推論機を作成
+https://zenn.dev/galapagos/articles/mnist_predictor_on_scratch
+
+day2 本記事 Scratchに重みを移植
+https://zenn.dev/galapagos/articles/mnist_weight
+
+day3 Scratchの標準機能だけで誤差逆伝播を組む
+https://zenn.dev/articles/backpropagation_on_scratch
+
+day4 Scratchの標準機能だけで誤差逆伝播を組んだらバグだらけなのでDebugする
+https://zenn.dev/galapagos/articles/debug_backpropagation
+
+Scratchの標準機能だけで実装した誤差逆伝播
+https://scratch.mit.edu/projects/1253455000/

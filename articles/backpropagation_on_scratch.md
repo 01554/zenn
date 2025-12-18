@@ -384,17 +384,17 @@ hidden_layer のΔ計算ですね。
 
 
 #### Link
-day1
+day1 MNIST推論機をScrachで組む
 https://zenn.dev/galapagos/articles/mnist_predictor_on_scratch
 
-day2
+day2 推論機に重みを移植する
 https://zenn.dev/galapagos/articles/mnist_weight
 
 day3 
 本記事
 
-day4
-
+day4 デバッグする
+https://zenn.dev/galapagos/articles/debug_backpropagation
 
 最終的に完成する誤差逆伝播をScratchの標準機能だけで実装したやつ
 https://scratch.mit.edu/projects/1253455000/

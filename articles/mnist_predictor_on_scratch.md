@@ -6,8 +6,7 @@ topics: [scratch,MNIST,ML]
 published: false
 ---
 
-この記事は[株式会社ガラパゴス（有志） Advent Calendar 2025
-](https://qiita.com/advent-calendar/2025/galapagos)の6日目です
+この記事は[株式会社ガラパゴス（有志） Advent Calendar 2025](https://qiita.com/advent-calendar/2025/galapagos)の6日目です
 
 
 お疲れ様です、波浪です。
@@ -291,4 +290,17 @@ W1_col_0 から W1_col_7 まで用意していますが
 重みの移植は次回に持ち越します。
 
 
+
+#### Link
+day1 本記事 ScratchでMNIST推論機を作成
+https://zenn.dev/galapagos/articles/mnist_predictor_on_scratch
+
+day2 本記事 Scratchに重みを移植
+https://zenn.dev/galapagos/articles/mnist_weight
+
+day3 Scratchの標準機能だけで誤差逆伝播を組む
+https://zenn.dev/articles/backpropagation_on_scratch
+
+day4 Scratchの標準機能だけで誤差逆伝播を組んだらバグだらけなのでDebugする
+https://zenn.dev/galapagos/articles/debug_backpropagation
 

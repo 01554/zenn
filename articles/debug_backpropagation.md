@@ -310,14 +310,18 @@ https://scratch.mit.edu/projects/1253455000
 
 
 #### Link
-day1
+day1 ScratchでMNIST推論機を作成
 https://zenn.dev/galapagos/articles/mnist_predictor_on_scratch
 
-day2
+day2 本記事 Scratchに重みを移植
 https://zenn.dev/galapagos/articles/mnist_weight
 
-day3 
+day3 Scratchの標準機能だけで誤差逆伝播を組む
 https://zenn.dev/articles/backpropagation_on_scratch
 
-day4
-本記事
+day4 Scratchの標準機能だけで誤差逆伝播を組んだらバグだらけなのでDebugする
+https://zenn.dev/galapagos/articles/debug_backpropagation
+
+Scratchの標準機能だけで実装した誤差逆伝播
+https://scratch.mit.edu/projects/1253455000/
+
