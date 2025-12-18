@@ -317,7 +317,7 @@ day2 本記事 Scratchに重みを移植
 https://zenn.dev/galapagos/articles/mnist_weight
 
 day3 Scratchの標準機能だけで誤差逆伝播を組む
-https://zenn.dev/articles/backpropagation_on_scratch
+https://zenn.dev/galapagos/articles/backpropagation_on_scratch
 
 day4 Scratchの標準機能だけで誤差逆伝播を組んだらバグだらけなのでDebugする
 https://zenn.dev/galapagos/articles/debug_backpropagation
