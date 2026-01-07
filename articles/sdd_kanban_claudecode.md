@@ -14,6 +14,12 @@ published: false
 さて、年も明けて2026年になったので環境をVerUPしたいなと思いSkillを見ていたら
 これは可能性の塊ですね。いままで自分がちまちま動かしていたKanbanのオーケストレーション作業をClaudeCodeに全振りできたので嬉しくなって書いちゃった記事になります。
 
+## この記事のポイント
+- VibeKanbanはMCP使うよりCURLでAPI直接叩いた方が制御しやすいよ
+- VibeKanbanはSQLiteのDB覗いた方がMCP使うより楽だよ
+- オーケストレーションは LLMだけでやらずに 状態抽出だけLLMでやるほうがいいよ
+- 参考にした論文は https://arxiv.org/abs/2601.01609 だよ
+- AIエージェント完全自動化はrate limitとの戦いだよ
 
 ## Taskを作成
 
