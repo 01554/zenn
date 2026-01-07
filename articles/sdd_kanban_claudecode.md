@@ -100,8 +100,7 @@ VibeKanbanのMCPって8個しか実装されておらず貧弱なんですよね
   | DELETE | /api/tasks/{id}             | タスク削除             |
   | POST   | /api/tasks/{id}/share       | タスク共有             |
 
-<details>
-  <summary>VibeKanbanで使えるその他API群</summary>
+:::details  VibeKanbanで使えるその他API群
 
 ###  Task Attempts (Workspace)
 
@@ -281,7 +280,7 @@ VibeKanbanのMCPって8個しか実装されておらず貧弱なんですよね
   | GET  | /api/scratch | スクラッチ一覧   |
   | GET  | /api/events  | イベントストリーム |
 
-</details>
+:::
 
 ## Skill化
 めんどうな人は全部一気にSkillsにしてもいいと思いますが
@@ -353,8 +352,7 @@ AIからの完了メッセージ
 
 問題なく動いてますね。
 
-<details>
-<summary>出力されたvk-register-tasksのSKILL.md</summary>
+:::details 出力されたvk-register-tasksのSKILL.md
 
 ```
 ---
@@ -424,8 +422,7 @@ curl -s -X POST "http://localhost:$VIBE_PORT/api/tasks" \
 ```
 
 
-</details>
-
+:::
 
 ## タスクの実行計画を修正
 この方法でAPIは普通に叩けるなとわかったんで
@@ -483,8 +480,7 @@ taskX - Codex impl taskX 追加実装
 
 というわけで出来たSKILLが以下
 
-<details>
-<summary>オーケストレーションskill</summary>
+:::details オーケストレーションskill
 
 ```
 ---
@@ -829,7 +825,7 @@ python3 scripts/notify_slack.py "全作業完了" "全作業完了"
 ```
 
 
-</details>
+:::
 
 約300行はちょっとでかいですね、そもそも責務が多すぎる。
 skill-creator でやるにはちょっと無理があったみたいなんで、分割していきます。
