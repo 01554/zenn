@@ -895,15 +895,17 @@ https://arxiv.org/abs/2601.01609
 なので今の状況にバチハマりですね。
 
 
-
-1. LLMは「状態」を作る（State Builder）
+---
+### LLMは「状態」を作る（State Builder）
 
 VibeKanbanやgitの現状を読み込ませてJSONで状態を吐き出すようにする
 LLMに「次に何をするべきか」を決めさせない。“事実＋根拠”だけ出させる。
 つまり get_project_state.py から得たい最小の factsを決める
-LLMは「次どうする？」を言わない。上の facts を埋めるだけ。
+LLMは「次どうする？」を言わない。
 
-2.  状態定義
+---
+### 状態定義
+
 ```
 IDLE
 RUNNING
@@ -917,9 +919,8 @@ PR_OPEN
 CI_PASS
 DONE
 ```
-
-
-3. 遷移ルール（決定論 if/then）
+---
+### 遷移ルール（決定論 if/then）
 ルールで「アクション」を決める（Policy / Rules）
 LLMの出してきたJSONを使った状態決定論（if/then）を構築する
 
@@ -955,13 +956,13 @@ verify_jobs = workspaces where parent_workspace_id in children.workspace_id
 verify_count_by_impl[impl_ws_id] = {in_progress, in_review, done, verdicts[]}
 ```
 
-………
+etc. etc.
+
 ---
 
-こんな感じでごりっごりにルールを決めていきます。
+こんな感じで**ごりっごりにルールを決め**ていきます。
 
 ### 監視スクリプト実行
-と、いうわけで完成。
 
 ![](/images/2026/sdd_kanban_claudecode/監視.png)
 ![](/images/2026/sdd_kanban_claudecode/実行.png)
@@ -977,9 +978,9 @@ verify_count_by_impl[impl_ws_id] = {in_progress, in_review, done, verdicts[]}
 ## 結果
 agent core runtimeにS3経由でファイルを送りつけて invocation する機能のために8個のタスクが作られ（実装、検証、リトライで最低48個に分岐）一気通貫でタスク完了するまでにかかった時間は14時間くらいでした。
 
-初めに書いた通り、僕は設計に数日かけるので14時間でおわられちゃうと、寝て起きたら終わってるので、次の仕事がまだできてないんだけど...ってなりますね。
+初めに書いた通り、僕はcddでも設計に数日かけるので14時間でおわられちゃうと、寝て起きたら終わってるので、次の仕事がまだできてないんだけど...ってなりますね。
 
-まだ試せてはいませんが
+まだそこまで長時間の機能開発は試せてはいませんが
 監視スクリプト＋Skill＋VibeKanbanのこのシステムなら
 一週間かかる仕事でも1ヶ月かかる仕事でも最後まで一気通貫してくれることでしょう
 
