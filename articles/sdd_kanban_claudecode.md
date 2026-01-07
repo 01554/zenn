@@ -434,8 +434,7 @@ curl -s -X POST "http://localhost:$VIBE_PORT/api/tasks" \
 :::
 
 ## タスクの実行計画を修正
-この方法でAPIは普通に叩けるなとわかったんで
-実際の実行計画に合わせていきます。
+この方法でAPIは普通に叩けるなとわかったんで実際の実行計画に合わせていきます。
 
 自分はCodexとClaudeCodeで実装を行い、かつ検証をClaudeCodeとCodexで行い、両方でGOが出たらOK
 どちらかでNGが出たら、実装を修正させて再検証という手順を踏んでいます。
@@ -451,7 +450,7 @@ taskX - Codex impl taskX
         + validate Claude - ClaudeCode impl taskX                    
 ```
             
-また、NGが出た場合は、修正タスクに対してNGを出したAIエージェントのinspectを増やします
+また、NGが出た場合は、修正タスクに対してNGを出したAIエージェントのvalidate taskを増やします
 
 ```
 taskX - Codex impl taskX  
@@ -477,9 +476,7 @@ taskX - Codex impl taskX 追加実装
 
 
 これを自分で管理しないで一気通貫にやってもらいます。
-普通にやるとClaudeCodeがタイムアウトしちゃうんで、管理用のスクリプトを用意して
-そこをうまいことやるぜ！ってのが今回の記事の趣旨ですね
-
+普通にやるとClaudeCodeがタイムアウトしがちなので、管理用のスクリプトを用意します。
 
 ## オーケストレーションskillを作成
 
@@ -579,8 +576,8 @@ todo から次のタスクを取得し、**Claude と Codex の両方で並列�
    **repo_id の取得:**
    ```bash
    python3 scripts/get_repo_id.py <project_id>
-   # 例: python3 scripts/get_repo_id.py 0748EE6C619A4A9B9190F090AF3DEEB1
-   # 出力: e2d7267e-4873-01a6-6238-de08b793fd0f (UUID形式)
+   # 例: python3 scripts/get_repo_id.py *****************
+   # 出力: **********-4873-01a6-6238-********** (UUID形式)
    ```
 
    **Claude タスク開始:**
@@ -824,7 +821,7 @@ python3 scripts/notify_slack.py "全作業完了" "全作業完了"
 
 ```
 # 状況確認
-「dify2lg プロジェクトのタスクを進めて」
+「 プロジェクトのタスクを進めて」
 
 # 特定タスク指定
 「タスク 1.1 の検証結果を確認して」
