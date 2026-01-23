@@ -1,8 +1,8 @@
 title: "実用AGI入門"
-summary: "Sequoia Capitalが提唱した「実用AGI（Long-horizon Agent）」の概念と、それを実現するための要素技術を解説します。"
+summary: "この本は、2026年4月の技術書展20で頒布を予定している「実用AGIーlong horizon agent 実例編」に先立ちどのような形式で書くのが良いかテストするためのパイロット版です。内容的には本来頒布する予定の第一章にあたります、あくまでもパイロット版であることを留意いただきたくお願いします。"
 topics: ["ai", "agent", "llm", "agi"]
 published: true
-price: 800
+price: 300
 chapters:
   - introduction
   - background
