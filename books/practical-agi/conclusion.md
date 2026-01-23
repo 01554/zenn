@@ -51,11 +51,3 @@ AI は「何かを伝える」存在から「**何かを成し遂げる**」存�
 
 **長期視野のエージェントの時代が、始まっています。**
 
----
-
-## 参考資料
-
-- [Sequoia Capital: 2026: This is AGI](https://sequoiacap.com/article/2026-this-is-agi/)
-- [Anthropic: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
-- [Cursor: Scaling Long-Running Autonomous Coding](https://cursor.com/ja/blog/scaling-agents)
-- [LangChain Deep Agents Documentation](https://docs.langchain.com/oss/python/deepagents/overview)
