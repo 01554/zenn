@@ -1,9 +1,9 @@
 ---
-title "ラズパイにNemoClawを入れてLAN越しのMacのQwen3.5を使う"
-emoji "🤖"
-type "tech" # tech 技術記事 / idea アイデア
-topics [RaspberryPi,NemoClaw,Qwen,Ubuntu,LLM]
-published false
+title: "ラズパイにNemoClawを入れてLAN越しのMacのQwen3.5を使う"
+emoji: "🤖"
+type: "tech" # tech: 技術記事 / idea: アイデア
+topics: [RaspberryPi,NemoClaw,Qwen,Ubuntu,LLM]
+published: false
 ---
 
 お疲れ様です、OpenClaw気にはなっていたけど怖くて手をだせていなかったチキン野郎の波浪です
