@@ -13,12 +13,6 @@ published: false
 
 
 
-## この記事のポイント
-
-- Raspberry Pi5(8GB)にUbuntu 24.04を入れてNVIDIA NemoClawをセットアップ
-- MacでホストしているQwen3.5-397B(llama.cpp)にLAN経由で接続
-- NemoClawの推論先を、ローカルLLMに変更
-
 
 
 ## 構成
@@ -30,6 +24,11 @@ NemoClaw (Agent Runtime)     ──→    llama.cpp (port 8016)
                               LAN   Qwen3.5-397B-A17B
 192.168.0.206                       192.168.0.77
 ```
+
+- Raspberry Pi5(8GB)にUbuntu 24.04を入れてNVIDIA NemoClawをセットアップ
+- MacでホストしているQwen3.5-397B(llama.cpp)にLAN経由で接続
+- NemoClawの推論先を、ローカルLLMに変更
+
 
 
 ## 手順
@@ -93,7 +92,7 @@ nemoclaw setup-spark
 Cannot uninstall jsonschema 4.10.3, RECORD file not found
 ```
 
-LAN越しにLLMを使う場合はvLLMは不要なので、`setup-spark` はここらでSkip `nemoclaw onboard` に進んで問題ない。cgroupの設定さえ済んでいればOK。
+LAN越しにLLMを使う場合はvLLM不要なので、`setup-spark` はここらでSkip `nemoclaw onboard` に進んで問題ない。cgroupの設定さえ済んでいればOK。
 
 ### 5. nemoclaw onboard
 
@@ -165,7 +164,7 @@ c['models']['providers']['nvidia']['baseUrl'] = 'https//inference.local/v1'
 c['models']['providers']['nvidia']['apiKey'] = 'none'
 c['models']['providers']['nvidia']['models'][0]['id'] = 'Qwen3.5-397B-A17B-UD-Q4_K_XL-00001-of-00006.gguf'
 c['models']['providers']['nvidia']['models'][0]['name'] = 'Qwen3.5 397B A17B'
-c['agents']['defaults']['model']['primary'] = 'nvidia/Qwen3.5-397B-A17B-UD-Q4_K_XL-00001-of-00006.gguf'
+c['agents']['defaults']['model']['primary'] = 'qwen/Qwen3.5-397B-A17B-UD-Q4_K_XL-00001-of-00006.gguf'
 with open('/sandbox/.openclaw/openclaw.json', 'w') as f
     json.dump(c, f, indent=2)
 print('done')
@@ -209,7 +208,7 @@ Hey! 👋 I'm your personal AI assistant. I can
 ```
 
 Qwen3.5-397BがNemoClawのエージェントとして動作することを確認。ラズパイからLAN越しにMac の推論を使い、サンドボックス内でファイル操作・Web検索・メッセージ送信などができる状態になった。
-ファイル書き出しとかもやってくれました、通信はなんかBraveのAPI_KEYよこせとかいわれるのでまた今度で！
+とりあえずテストでファイル書き出しくらいは普通にできました、WEBサーチはなんかBraveのAPI_KEYよこせとかいわれるのでまた今度で！
 
 
 ## ハマりポイント
