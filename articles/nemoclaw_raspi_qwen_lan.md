@@ -31,27 +31,17 @@ NemoClaw (Agent Runtime)     ──→    llama.cpp (port 8016)
 192.168.0.206                       192.168.0.77
 ```
 
-## 前提パッケージのインストール
-
-当然ながらUbuntu 24.04の初期状態では必要なパッケージが入っていない。NemoClawのセットアップ前にまとめて入れておきます。
-あと途中でNVIDAのAPI_KEY入れろとか言われます、入れないと進まないのでNVIDIAのアカウントを作るだけ作りましょう。
-
-
-```bash
-sudo apt install -y curl git docker.io python3-pip
-sudo systemctl enable docker
-sudo systemctl start docker
-sudo usermod -aG docker $USER
-```
-
-
-dockerグループの反映のため、一度ログアウト・再ログイン。
 
 ## 手順
 
 ### 1. ラズパイを完全初期化してUbuntu 24.04 desktopを入れる
 
 Raspberry Pi ImagerでUbuntu 24.04.4 LTS desktopを焼いて起動。
+ServerじゃなくてDesktopにしたのは、知り合いがChromeのヘッド有りが使いたいのに使えないと不満を述べていたので
+画面側もいじれるところがザリガニはいいんか？いいんか？と思いDesktopにしました
+
+
+
 
 ### 2. Mac 上のQwen3.5への疎通確認
 
@@ -67,6 +57,20 @@ curl -X POST http//192.168.0.778016/v1/chat/completions \
 
 ### 3. NemoClawのインストール
 
+当然ながらUbuntu 24.04の初期状態では必要なパッケージが入っていない。NemoClawのセットアップ前にまとめて入れておきます。
+あと途中でNVIDAのAPI_KEY入れろとか言われます、入れないと進まないのでNVIDIAのアカウントを作るだけ作りましょう。
+
+
+```bash
+sudo apt install -y curl git docker.io python3-pip
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo usermod -aG docker $USER
+```
+dockerグループの反映のため、一度ログアウト・再ログイン。
+
+
+その後NemoClawのインストール
 ```bash
 curl -fsSL https//nvidia.com/nemoclaw.sh | bash
 ```
