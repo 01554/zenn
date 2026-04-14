@@ -6,9 +6,9 @@ topics: [llamacpp,MNN,Qwen,Android,GPU]
 published: true
 ---
 
-こちらの本の著者 hellohazime です。
+『スマホでOpenClawが動き出す』の著者 hellohazime です。
 
-https://hellohazime.booth.pm/items/8168207
+https://hellohazime.booth.pm/items/8168199
 
 本の中ではスマホ上での2Bモデルの動作は難しいと書きましたが、アプリ経由でMNNを使えばGPU推論が可能だったので、その手順をnoteに書きました。
 
