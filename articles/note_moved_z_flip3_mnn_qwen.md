@@ -1,5 +1,5 @@
 ---
-title: "Galaxy Z Flip3でllama.cppのVulkan GPUビルドを試したら、GPUが見つからなかったので、MNN経由でGPU使ったらQwen3.5:2BがスマホのGPU使って推論できた話"
+title: "Android termux上でllama.cpp Vulkanが動かなかったのでMNN+OpenCLでスマホGPU推論した話"
 emoji: "📝"
 type: "tech"
 topics: [llamacpp,MNN,Qwen,Android,GPU]
