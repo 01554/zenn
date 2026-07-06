@@ -1,0 +1,24 @@
+title: "Scratch 3 で作って動かす小さな LLM：microGPT のなかみを1手ずつ"
+summary: |
+  拡張機能なし（ペンだけ）の Scratch 3 で、小さな GPT（microGPT）を丸ごと組み上げます。
+  トークン化・埋め込み・アテンション・MLP・出力・サンプリング・自己回帰生成、そして学習（誤差逆伝播と Adam）まで、
+  実際に動く俳句生成モデルの画面を1手ずつ追いながら解説します。
+  数式と Scratch のブロックを1つずつ対応させ、LLM が中で何をしているのかを目で確かめられる本です。
+topics: ["scratch", "llm", "machinelearning", "transformer", "deeplearning"]
+published: false
+price: 0
+chapters:
+  - 01-hajimeni
+  - 02-zentaizou
+  - 03-token
+  - 04-embedding
+  - 05-attention1
+  - 06-attention2
+  - 07-mlp
+  - 08-output
+  - 09-sampling
+  - 10-autoregressive
+  - 11-gakushu1
+  - 12-gakushu2
+  - 13-uragawa
+  - 14-owarini
