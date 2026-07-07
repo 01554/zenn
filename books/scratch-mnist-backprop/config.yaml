@@ -1,0 +1,26 @@
+title: "Scratch 3 で作る手書き数字AI：誤差逆伝播まで全部ブロックで"
+summary: |
+  拡張機能なしの Scratch 3 で、手書き数字を当てる3層ニューラルネットワークを組み、
+  誤差逆伝播による学習まで Scratch の中で走らせます。
+  ニューロンは掛け算と足し算だけで作れます。exp や log のような難しい関数は、
+  Python で先に計算した答えの表を Scratch のリストに読み込んで、表を引くだけで済ませます。
+  数式が読めなくても、学習して賢くなっていくニューラルネットワークの中身を
+  1ブロックずつ目で確かめられる本です。
+topics: ["scratch", "mnist", "machinelearning", "deeplearning", "backpropagation"]
+published: false
+price: 0
+chapters:
+  - 01-hajimeni
+  - 02-zentaizou
+  - 03-input-panel
+  - 04-neuron
+  - 05-lookup-table
+  - 06-forward
+  - 07-softmax
+  - 08-dataset
+  - 09-loss
+  - 10-backprop1
+  - 11-backprop2
+  - 12-update-loop
+  - 13-debug
+  - 14-owarini
