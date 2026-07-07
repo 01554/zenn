@@ -2,6 +2,13 @@
 title: "サンプリングと温度：確率から1文字を引く"
 ---
 
+![](/images/scratch-microgpt-llm/tobira_09.png)
+
+![](/images/scratch-microgpt-llm/manga_09_p1.png)
+
+![](/images/scratch-microgpt-llm/manga_09_p2.png)
+
+
 ## くじ引きで次の文字を決める
 
 前章で、次の文字の確率分布 $p_v$ が出ました。ここから実際に1文字を決めます。方法は大きく2つ。
@@ -21,6 +28,10 @@ title: "サンプリングと温度：確率から1文字を引く"
 $$
 \text{選ぶ文字} = \min\Big\{ v \ \Big|\ \sum_{v'\le v} p_{v'} \ge r \Big\}
 $$
+
+:::message
+数式の記号のよみかた。$\min$ は「いちばん小さいものを選ぶ」（反対に $\max$ は大きいほう）。縦棒 $\mid$ は「〜という条件で」。$\ge$ は「以上（≧）」、$\le$ は「以下（≦）」。つまりこの式は「確率を順に足していって、合計が初めて $r$ 以上になった、いちばん手前の文字 $v$ を選ぶ」と言っている。
+:::
 
 確率が大きい文字ほど区間の幅が広いので、乱数がそこに落ちやすい。これがくじ引きの中身です。
 
@@ -57,6 +68,23 @@ T = \frac{\text{温度パーセント}}{100}
 $$
 
 のように使います。スライダーを下げれば手堅い句に、上げれば奇抜な句に寄ります。スクリーンショットでは 50（＝$T=0.5$）で、やや手堅めの設定です。数式の $T$ を、指1本のスライダーで動かせる。Scratch で作るとここがおもしろいところです。
+
+## microgpt.py ではこう書く
+
+温度つきのサンプリングは、microgpt.py では2行です。
+
+```python
+probs = softmax([l / temperature for l in logits])            # 点数を温度で割ってから確率に
+token_id = random.choices(range(vocab_size), weights=[p.data for p in probs])[0]
+```
+
+`l / temperature` が数式の $\ell_v / T$、つまりソフトマックスに入れる前に点数を温度 $T$ で割る部分です。`random.choices(..., weights=probs)` が「確率に応じたくじ引き」で、これが本章の累積和サンプリングの正体です（Python の標準ライブラリが内部で累積和と乱数を使っています）。Scratch には `random.choices` がないので、累積和のくじ引きを自分でループとして書いています。
+
+それが次の「ルーレット抽選」ブロックです。
+
+![ルーレット抽選ブロックの定義](/images/microgpt_on_scratch/fn_roulette.png)
+
+まず全部の確率を足して合計を出し（前半のループ）、`rnd(0〜1の乱数) × 合計` で当たりくじの位置（`目標値`）を決めます。後半のループで確率を順に足していき（`累積`）、初めて `累積 > 目標値` を超えた文字を選ぶ。これが本章の累積和サンプリングそのもので、microgpt.py の `random.choices(..., weights=probs)` が内部でやっていることと同じです。
 
 ## 1文字、決まった
 

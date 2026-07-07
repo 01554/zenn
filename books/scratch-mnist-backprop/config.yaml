@@ -1,8 +1,9 @@
 title: "Scratch 3 で作る手書き数字AI：誤差逆伝播まで全部ブロックで"
 summary: |
-  拡張機能なしの Scratch 3 で、手書き数字を当てる3層ニューラルネットワークを組み、
-  誤差逆伝播による学習まで Scratch の中で走らせます。
-  ニューロンは掛け算と足し算だけで作れます。exp や log のような難しい関数は、
+  拡張機能なしの Scratch 3 で、手書き数字を当てて、学習までする3層ニューラルネットワークを組みます。
+  マウスで書いた数字を判定する推論モードと、誤差逆伝播でゼロから重みを育てる学習モードを、
+  1つの Scratch プロジェクトの中に作ります。
+  ニューロンは掛け算と足し算だけ。exp や log のような難しい関数は、
   Python で先に計算した答えの表を Scratch のリストに読み込んで、表を引くだけで済ませます。
   数式が読めなくても、学習して賢くなっていくニューラルネットワークの中身を
   1ブロックずつ目で確かめられる本です。
@@ -17,10 +18,11 @@ chapters:
   - 05-lookup-table
   - 06-forward
   - 07-softmax
-  - 08-dataset
-  - 09-loss
-  - 10-backprop1
-  - 11-backprop2
-  - 12-update-loop
-  - 13-debug
-  - 14-owarini
+  - 08-suiron
+  - 09-dataset
+  - 10-loss
+  - 11-backprop1
+  - 12-backprop2
+  - 13-update-loop
+  - 14-debug
+  - 15-owarini

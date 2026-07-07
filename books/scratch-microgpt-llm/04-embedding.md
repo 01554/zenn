@@ -2,6 +2,13 @@
 title: "埋め込み：番号を16個の数値に変える"
 ---
 
+![](/images/scratch-microgpt-llm/tobira_04.png)
+
+![](/images/scratch-microgpt-llm/manga_04_p1.png)
+
+![](/images/scratch-microgpt-llm/manga_04_p2.png)
+
+
 ## 文字を意味の座標に置く
 
 トークン化で「や」は `36` になりました。でも `36` という数そのものに意味はありません。そこで、各文字を16個の数値の組（ベクトル）に対応させます。この16次元の空間の中で、近い意味の文字は近い場所に配置されるように、数値を学習で決めていきます。この変換を埋め込み（embedding）と呼びます。
@@ -13,6 +20,16 @@ E \in \mathbb{R}^{81 \times 16}
 $$
 
 という表を用意します。$36$ 番目の行を丸ごと取り出せば、「や」の埋め込みベクトルになります。この表 $E$ の中身が、モデルが学習で獲得する文字の知識の一部です。
+
+:::message
+数式の記号のよみかた。
+
+- $\mathbb{R}$ は「ふつうの数（実数）ぜんぶの集まり」。1 や -2.5、3.14 のような数のこと。
+- $\in$ は「〜の仲間である」。$E \in \mathbb{R}^{81 \times 16}$ は「$E$ は数をならべた表の一種だ」と読む。
+- $\mathbb{R}^{81 \times 16}$ は「たて81、よこ16のマス目に数をならべた表」。全部で $81 \times 16 = 1296$ 個の数が入る。$\times$ はふつうのかけ算の記号。
+
+数式は、こまかい所まで追えなくても大丈夫。となりの言葉の説明と絵を合わせれば意味はつかめる。
+:::
 
 ![各トークンは16個の数値（ベクトル）になる](/images/scratch-microgpt-llm/step_embed_intro.png)
 
@@ -46,9 +63,56 @@ Scratch では、埋め込み表 $E$ と位置表 $P$ をそれぞれリスト�
 
 - <span style="color:red">赤い丸</span>＝その成分が負
 - <span style="color:blue">青い丸</span>＝その成分が正
-- 丸が大きいほど絶対値が大きい
+- 色が濃い丸ほど絶対値が大きく、うすい丸は0に近い
 
 キャプションの下に「↓埋め込みベクトル16個（ここから変化していく）」とあります。この16個の数値は固定ではありません。このあとアテンションと MLP を通るたびに書き換わり、「や、の続きを考えるために必要な情報」を溜め込んでいきます。埋め込みはその出発点です。
+
+## microgpt.py ではこう書く
+
+埋め込みは、microgpt.py では次の3行です。
+
+```python
+tok_emb = state_dict['wte'][token_id]   # 文字の埋め込み（表 E の token_id 行目）
+pos_emb = state_dict['wpe'][pos_id]     # 位置の埋め込み（表 P の pos_id 行目）
+x = [t + p for t, p in zip(tok_emb, pos_emb)]  # 2つを成分ごとに足す
+```
+
+`wte`（word token embedding）が数式の埋め込み表 $E$、`wpe`（word position embedding）が位置表 $P$ です。`[token_id]` で表の1行（16個）を丸ごと取り出すのが「表引き」、`zip` で並べて足すのが $\boldsymbol{x}_k = E[t_k] + P[k]$ にあたります。
+
+Scratch では、この埋め込みを forward（順伝播）ブロックの先頭で行います。
+
+![forward の先頭：埋め込み（表引き＋ベクトルたし算）](/images/microgpt_on_scratch/fn_embed.png)
+
+「ベクトルたし算」の左の入力が文字の埋め込み（表 $E$ から `tok` の行を引く）、右の入力が位置の埋め込み（表 $P$ から `pos` の行を引く）です。これを16回ぶん足しているのが、microgpt.py の `x = [t + p for t, p in zip(tok_emb, pos_emb)]` にあたります。アニメの「位置4の文字がベクトルになった」の丸16個は、このブロックが作った $\boldsymbol{x}$ を色で表したものでした。
+
+## スケールをそろえる：RMSNorm
+
+足してできたベクトル $\boldsymbol{x}$ は、成分によって大きさがバラバラです。大きすぎる成分があると、このあとの掛け算で値が暴れて学習が不安定になります。そこで、ベクトル全体の大きさを一定のスケールにそろえる正規化（normalization）を通します。このモデルが使うのは RMSNorm です。
+
+$$
+\mathrm{RMSNorm}(\boldsymbol{x}) = \frac{\boldsymbol{x}}{\sqrt{\dfrac{1}{d}\displaystyle\sum_{i} x_i^2 + \varepsilon}}
+$$
+
+各成分を2乗して平均し（これが二乗平均、Root Mean Square の中身）、その平方根で全体を割るだけです。割ると、ベクトルの長さがだいたい1くらいにそろいます。
+
+:::message
+数式の記号のよみかた。$\sqrt{\phantom{x}}$（ルート）は「2乗するとその中身になる数」、$\sum_i x_i^2$ は「各成分を2乗してぜんぶ足す」（第5章の $\sum$）、$d$ は成分の個数（ここでは16）、$\varepsilon$（イプシロン）は0で割るのを防ぐごく小さい数です。要するに「ベクトルの平均的な大きさで割って、スケールをそろえる」操作です。
+:::
+
+microgpt.py では、これも短い関数です。
+
+```python
+def rmsnorm(x):
+    ms = sum(xi * xi for xi in x) / len(x)   # 2乗の平均
+    scale = (ms + 1e-5) ** -0.5              # その平方根の逆数
+    return [xi * scale for xi in x]          # 全成分に掛ける
+```
+
+Scratch にも同じ働きの「rmsnorm（正規化）」ブロックがあります。
+
+![rmsnorm（正規化）ブロックの定義](/images/microgpt_on_scratch/fn_rmsnorm.png)
+
+前半のループで各成分を2乗して合計し（`二乗和`）、後半で「平均＋微小値」の逆平方根（`ベクトル逆平方根`）を全成分に掛ける。上の `rmsnorm(x)` の3行と同じ手順が、そのままブロックとして並んでいます。この正規化は埋め込みの直後だけでなく、次章からのアテンションの前・MLP の前でも毎回かかります。派手な処理ではありませんが、これがないと学習が途中で壊れます。
 
 ## なぜ16個なのか
 

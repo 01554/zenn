@@ -2,6 +2,13 @@
 title: "裏側：6本のリストで作る自動微分エンジン"
 ---
 
+![](/images/scratch-microgpt-llm/tobira_13.png)
+
+![](/images/scratch-microgpt-llm/manga_13_p1.png)
+
+![](/images/scratch-microgpt-llm/manga_13_p2.png)
+
+
 この本ではずっと、順伝播でノードを記録し、逆順スキャンで勾配を出す、と言ってきました。この章では、その自動微分（autograd）エンジンの中身を、Scratch のリストのレベルまで開けます。Scratch で LLM を成立させているのは、この仕組みです。
 
 ## PyTorch の1行が、Scratch では何になるか
@@ -35,6 +42,22 @@ loss.backward()
 実際のこのモデルでは、`a*b + c`（積和, FMA）のような3入力の演算を1ノードで表せるよう、親を3つまで持てる拡張（`nc3`/`ng3`）も入れてあります。ノード数が減って、Scratch でも動く規模に収まります。考え方は2親版とまったく同じです。
 :::
 
+microgpt.py では、この6本のリストにあたるものが `Value` という小さなクラス1つにまとまっています。1つのノードが `Value` 1個です。
+
+```python
+class Value:
+    def __init__(self, data, children=(), local_grads=()):
+        self.data = data                 # ← nd：ノードの値
+        self.grad = 0                    # ← ng：ノードの勾配
+        self._children = children        # ← nc1, nc2：親ノード
+        self._local_grads = local_grads  # ← ng1, ng2：親への掛け率
+
+    def __mul__(self, other):   # 掛け算 c = a * b を作る
+        return Value(self.data * other.data, (self, other), (other.data, self.data))
+```
+
+`Value` の4つの持ち物 `data / grad / _children / _local_grads` が、そのまま6本リストの `nd / ng / (nc1,nc2) / (ng1,ng2)` です。`__mul__` の最後の `(other.data, self.data)` が「親への掛け率」で、$\dfrac{\partial c}{\partial a}=b$、$\dfrac{\partial c}{\partial b}=a$ を並べたもの。上で見た掛け算ノードの記録と、完全に同じことをしています。microgpt.py はオブジェクトの参照で親をつなぎ、Scratch はリスト番号で親を指す。持てる道具が違うだけで、記録している中身は同じです。
+
 ## 順伝播：ノードを積んでいく
 
 順伝播は、演算するたびに新しいノードをリストの末尾に追加していく作業です。掛ける・足す・ReLU・log……どの演算にも、値を積むことと親と掛け率を積むことがセットになった専用ブロックを用意してあります。
@@ -63,14 +86,28 @@ loss.backward()
 
 1. 全ノードの勾配 `ng` を0にリセット。
 2. 損失ノード（最後のノード）の勾配 `ng` を 1 にする（$\dfrac{\partial L}{\partial L}=1$）。
-3. `nd` を末尾から先頭へ1つずつ見ていく。各ノード $i$ について：
-   - 自分の勾配 `ng[i]` を、親へ配る。
-   - 親1へ：`ng[nc1[i]]` に `ng[i] × ng1[i]` を足し込む。
-   - 親2へ：`ng[nc2[i]]` に `ng[i] × ng2[i]` を足し込む。
+3. `nd` を末尾から先頭へ1つずつ見ていく。各ノード $i$ について、自分の勾配 `ng[i]` を親へ配る。親1へは `ng[nc1[i]]` に `ng[i] × ng1[i]` を、親2へは `ng[nc2[i]]` に `ng[i] × ng2[i]` を足し込む。
 
 これだけです。連鎖律 $\dfrac{\partial L}{\partial \text{親}} = \dfrac{\partial L}{\partial \text{自分}}\times\dfrac{\partial \text{自分}}{\partial \text{親}}$ が、`ng[i]` × 掛け率を親に足す、という1行にそのまま対応しています。
 
 なぜ後ろから前へ1回で正しいのか。あるノードの子は必ず自分より後ろにいるので、後ろから進めば、自分の番が来たときには自分に流れ込む勾配はすべて集まり終えています。だから再帰も、依存関係の解決もいりません。リストを逆順に舐めるだけで、数学的に正しい誤差逆伝播になります。
+
+microgpt.py の `backward()` も、まさにこの逆順スキャンです。
+
+```python
+def backward(self):
+    # ... 親→子の順（トポロジカル順）にノードを並べた topo を作る ...
+    self.grad = 1                     # 損失ノードの勾配を1に（∂L/∂L = 1）
+    for v in reversed(topo):          # 後ろから前へ、1回スキャン
+        for child, local_grad in zip(v._children, v._local_grads):
+            child.grad += local_grad * v.grad   # 親へ、勾配 × 掛け率 を足し込む
+```
+
+`reversed(topo)` が「後ろから前へ」、`child.grad += local_grad * v.grad` が「親へ `ng[i] × 掛け率` を足し込む」で、上の逆順スキャンの手順3とぴたり一致します。Scratch では、この2重ループを、`nd` の番号を末尾から1つずつ減らしながら回すブロックとして書いています。
+
+![backward（逆順スキャンで勾配を配る）の定義](/images/microgpt_on_scratch/fn_backward.png)
+
+上がその逆伝播ブロックです。`nd` を後ろからたどり、各ノードの勾配を親（`nc1`/`nc2`）に `ng1`/`ng2` を掛けて足し込んでいるのが見てとれます。microgpt.py の `backward()` の中身が、そのままブロックになっています。
 
 スキャンが終わると、`ng` の先頭6080個に、6080個の重みそれぞれの勾配 $\dfrac{\partial L}{\partial w}$ が入っています。あとは第12章の Adam でこれを使うだけです。学習ステップの中身を1枚にすると、こうです。
 

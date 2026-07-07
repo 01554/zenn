@@ -2,6 +2,13 @@
 title: "学習②：Adam と損失曲線"
 ---
 
+![](/images/scratch-microgpt-llm/tobira_12.png)
+
+![](/images/scratch-microgpt-llm/manga_12_p1.png)
+
+![](/images/scratch-microgpt-llm/manga_12_p2.png)
+
+
 前章で各重みの勾配 $\dfrac{\partial L}{\partial w}$ が求まりました。今度は、その勾配を使って重みを更新する最適化アルゴリズムと、学習が進むと損失がどう下がるかを扱います。
 
 ## 勾配降下の一歩をうまく踏む
@@ -39,6 +46,10 @@ $$
 
 （$\hat m, \hat v$ は学習の初期を補正した値、$\varepsilon$ はゼロ割り防止の微小値。）
 
+:::message
+数式の記号のよみかた。$\beta_1, \beta_2$（ベータ）や $\varepsilon$（イプシロン）も、第11章の $\eta$ と同じくギリシャ文字で、ただの数の名前です。$\beta_1, \beta_2$ は「どれくらい昔まで平均に混ぜるか」を決める数（0〜1）、$\varepsilon$ は「0 で割ってしまうのを防ぐための、ごく小さい数」。文字の上の帽子（$\hat m$）は「少し手直しした値」という目印です。
+:::
+
 直感的には、
 
 - よく動く重み（$v$ 大）は歩幅を小さくして慎重に。
@@ -46,6 +57,29 @@ $$
 - 慣性 $m$ のおかげで、細かいジグザグに惑わされず、谷へまっすぐ進む。
 
 このモデルも、6080個の重み1つずつに $m$ と $v$ を持たせ、Adam で更新します。1回の更新（1ステップ）は、順伝播で損失、逆伝播で勾配、Adam で更新、の3つがワンセットです。
+
+## microgpt.py ではこう書く
+
+Adam の更新は、microgpt.py では次のループです。
+
+```python
+learning_rate, beta1, beta2, eps_adam = 0.01, 0.85, 0.99, 1e-8
+# ... 各ステップで ...
+lr_t = learning_rate * (1 - step / num_steps)   # 学習率を少しずつ下げる
+for i, p in enumerate(params):                   # 6080個の重みを1つずつ
+    m[i] = beta1 * m[i] + (1 - beta1) * p.grad          # 勾配の平均 m
+    v[i] = beta2 * v[i] + (1 - beta2) * p.grad ** 2     # 勾配2乗の平均 v
+    m_hat = m[i] / (1 - beta1 ** (step + 1))            # 初期を補正した m̂
+    v_hat = v[i] / (1 - beta2 ** (step + 1))            # 初期を補正した v̂
+    p.data -= lr_t * m_hat / (v_hat ** 0.5 + eps_adam)  # 重みを更新
+    p.grad = 0                                          # 勾配をリセット
+```
+
+`p.grad` は、前章の `loss.backward()` が各重みに書き込んだ勾配 $\dfrac{\partial L}{\partial w}$ です。ループの中の4行が、上の式の $m, v, \hat m, \hat v$ にそのまま対応し、`p.data -= ...` が更新式 $w \leftarrow w - \eta\,\dfrac{\hat m}{\sqrt{\hat v}+\varepsilon}$ です。`beta1, beta2, eps_adam` が $\beta_1, \beta_2, \varepsilon$。Scratch では、この6080回のループを、各重みの $m, v$ を別リストに持ちながら回します。
+
+![Adam の更新をするブロック（各重みの m・v を使って重みを直す）](/images/microgpt_on_scratch/fn_adam.png)
+
+上が、その Adam 更新を Scratch のブロックにしたものです。microgpt.py の `for i, p in enumerate(params)` のループが、そのままブロックの繰り返しになっているのが見てとれます。
 
 ## 1ステップの中身
 

@@ -2,6 +2,13 @@
 title: "アテンション①：やわらかい辞書引き"
 ---
 
+![](/images/scratch-microgpt-llm/tobira_05.png)
+
+![](/images/scratch-microgpt-llm/manga_05_p1.png)
+
+![](/images/scratch-microgpt-llm/manga_05_p2.png)
+
+
 ## 前の文字に問い合わせる
 
 いま「ふるいけや」まで来て、位置4の「や」のベクトルを持っています。次の文字を賢く選ぶには、「や」単体ではなく、これまでの文字全体の流れを踏まえたい。「ふるいけ」＋「や」という並びは、俳句の上五っぽい、季語が来そう。そういう文脈を、「や」のベクトルに混ぜ込みたいのです。
@@ -42,6 +49,15 @@ $$
 a_{ij} = \frac{\exp(s_{ij})}{\sum_{j'} \exp(s_{ij'})}
 $$
 
+:::message
+数式の記号のよみかた。
+
+- $\cdot$（中点）はかけ算。ベクトルどうしの $\boldsymbol{q}\cdot\boldsymbol{k}$ は「同じ場所どうしをかけて、全部足す」特別なかけ算で、内積と呼ぶ。2つの向きが似ているほど大きくなる。
+- $\sqrt{\phantom{x}}$（ルート）は「2乗するとその中身になる数」。$\sqrt{9}=3$ のように使う（中学3年で習う）。
+- $\sum$（シグマ）は「ぜんぶ足す」という記号。$\sum_{j}$ は $j$ を1つずつ変えながら順に足していくこと。
+- $\exp(x)$ は $e^x$ のこと（$e$ はおよそ 2.718 という決まった数）。中身がマイナスでも答えは必ずプラスになるので、点数を「プラスの重み」に変えるのに使う。
+:::
+
 これで $\sum_j a_{ij} = 1$、つまりどの文字にどれだけ注目するかの配分になりました。最後に、この配分でバリューを混ぜます。
 
 $$
@@ -75,11 +91,36 @@ Scratch では、いまの文字のクエリと各文字のキーの内積を全
 
 この絵は、数式の $a_{ij}$ をそのまま可視化したものです。どの過去の文字を重視して次を決めようとしているかが、線の濃淡でわかります。
 
+## microgpt.py ではこう書く
+
+microgpt.py では、まず Q・K・V を作り、ヘッドごとにスコア→ソフトマックス→加重和を計算します。1ヘッドぶんを抜き出すと、次のコードです（1層なので重みの名前は `layer0` から始まります）。
+
+```python
+q = linear(x, state_dict['layer0.attn_wq'])   # クエリ  q = W_Q x
+k = linear(x, state_dict['layer0.attn_wk'])   # キー    k = W_K x
+v = linear(x, state_dict['layer0.attn_wv'])   # バリュー v = W_V x
+
+# ヘッド h のぶんだけ取り出して（q_h, k_h, v_h）
+attn_logits  = [sum(q_h[j] * k_h[t][j] for j in range(head_dim)) / head_dim**0.5
+                for t in range(len(k_h))]      # スコア s_ij（内積 ÷ √d_h）
+attn_weights = softmax(attn_logits)            # 配分  a_ij
+head_out     = [sum(attn_weights[t] * v_h[t][j] for t in range(len(v_h)))
+                for j in range(head_dim)]      # 加重和 z_i
+```
+
+`attn_wq/wk/wv` が数式の $W_Q, W_K, W_V$、`sum(q_h[j]*k_h[t][j] ...)` が内積 $\boldsymbol{q}_i\cdot\boldsymbol{k}_j$、`head_dim**0.5` が $\sqrt{d_h}$、`softmax` が $a_{ij}$、`head_out` が加重和 $\boldsymbol{z}_i$ です。`linear` は「掛けて足す」だけの関数（第13章）。
+
+Scratch の「attention（1ヘッド分）」ブロックはかなり長いので、ここでは注目スコアを計算する前半だけを見せます。
+
+![attention（1ヘッド分）ブロックの一部：注目スコア（q・k）を計算するところ](/images/microgpt_on_scratch/fn_attn.png)
+
+「ベクトルかけ算」と「ベクトル横和(a*b+c)」で、クエリとキーを成分ごとに掛けて足しているのが内積 $\boldsymbol{q}_i\cdot\boldsymbol{k}_j$ です。続く「ベクトル×定数 … 0.5」が $\sqrt{d_h}$ による割り算にあたり（このモデルは $d_h=4$ なので $1/\sqrt{4}=0.5$）、できた点数を「注目スコア」リストに積んでいきます。このあとブロックは、ソフトマックスと加重和（バリューの混ぜ合わせ）へと続きます。PyTorch の数行が、Scratch ではこれだけのループの積み重ねになります。
+
 ## 因果マスク：未来は見ない
 
 守るべきルールが1つあります。まだ生成していない未来の文字を見てはいけない、というものです。次の文字を予想している最中に、その答え（未来）をカンニングできてしまっては学習になりません。
 
-そこで、位置 $i$ から見て未来（$j > i$）のスコアを $-\infty$ にして、ソフトマックス後の配分を0にします。
+そこで、位置 $i$ から見て未来（$j > i$）のスコアを $-\infty$ にして、ソフトマックス後の配分を0にします（$\infty$ は「かぎりなく大きい」、$-\infty$ は「かぎりなく小さい」という意味。$\exp$ に通すと0になるので、その文字は完全に無視される）。
 
 $$
 s_{ij} = -\infty \quad (j > i)

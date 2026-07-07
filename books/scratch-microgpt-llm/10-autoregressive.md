@@ -2,6 +2,13 @@
 title: "自己回帰生成：1文字ずつ繰り返して文を作る"
 ---
 
+![](/images/scratch-microgpt-llm/tobira_10.png)
+
+![](/images/scratch-microgpt-llm/manga_10_p1.png)
+
+![](/images/scratch-microgpt-llm/manga_10_p2.png)
+
+
 ## 出力を入力に戻す
 
 ここまでの第3〜9章は、すべて次の1文字を1個だけ出す計算でした。俳句を完成させるには、これを繰り返します。
@@ -28,6 +35,10 @@ $$
 P(c_0 c_1 \cdots c_{n}) = \prod_{k} P(c_k \mid c_0, c_1, \dots, c_{k-1})
 $$
 
+:::message
+数式の記号のよみかた。$P(\ )$ は「〜が起きる確率」。$\prod$（パイ）は「ぜんぶかける」という記号で、第5章の $\sum$（ぜんぶ足す）のかけ算版。$P(A \mid B)$ の縦棒 $\mid$ は「〜のもとで」で、「$B$ が起きたという前提での $A$ の確率」を表す。この式は「文全体ができる確率は、1文字ずつの『それまでを見た上での次の1文字の確率』をぜんぶかけ合わせたもの」と言っている。
+:::
+
 右辺の各因子 $P(c_k \mid \text{それまでの文字})$ は、第8章でソフトマックスが出した確率です。モデルは毎ステップ、これまでを条件にした次の確率を出し、そこから1文字引いて、条件を1つ伸ばします。その繰り返しです。
 
 ## プロンプトと続きを書く段階
@@ -50,6 +61,21 @@ Scratch では、自己回帰は素直な繰り返しブロックです。
   - ペンで1文字ぶん右に進めて描く
 
 生成が進むほど、画面左のひらがなが1文字ずつ伸びていきます。最後まで回すと、こうなります。
+
+microgpt.py では、この繰り返しがそのままループになっています。
+
+```python
+token_id = BOS                              # 文の始まりの記号からスタート
+for pos_id in range(block_size):            # 1文字ずつ、最大 block_size 回
+    logits = gpt(token_id, pos_id, keys, values)          # 第3〜8章の計算ぜんぶ
+    probs = softmax([l / temperature for l in logits])    # 確率に（第9章）
+    token_id = random.choices(range(vocab_size), weights=[p.data for p in probs])[0]
+    if token_id == BOS:                     # 終わりの記号が出たら打ち切り
+        break
+    sample.append(uchars[token_id])         # 引いた番号を文字に戻してつなぐ
+```
+
+`gpt(...)` の1行に、トークン化から出力までの計算が丸ごと入っています。その結果引いた `token_id` を、次のループでまた `gpt` に渡す。これが「出力を入力に戻す」自己回帰そのものです。`uchars[token_id]` で番号を文字に戻すのは、第3章のトークン化のちょうど逆向きの操作です。Scratch では、この `for` を「〜まで繰り返す」ブロックとして書き、1文字ぶんずつペンで描き進めます。
 
 ![生成結果：ふるいけや▶　あまにおとしの　あきのうえ](/images/microgpt_on_scratch/usage_output.png)
 

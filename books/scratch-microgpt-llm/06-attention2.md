@@ -2,6 +2,13 @@
 title: "アテンション②：マルチヘッドと残差"
 ---
 
+![](/images/scratch-microgpt-llm/tobira_06.png)
+
+![](/images/scratch-microgpt-llm/manga_06_p1.png)
+
+![](/images/scratch-microgpt-llm/manga_06_p2.png)
+
+
 ## 4つの視点で同時に見る
 
 文脈から拾いたい情報は、1種類ではありません。直前の音のつながり、季語との相性、5音・7音のリズムの区切り。1組の Q・K・V だけだと、これらを1つの注目パターンに押し込めることになり、無理が出ます。
@@ -52,7 +59,27 @@ $$
 - 上の段：アテンション前のベクトル $\boldsymbol{x}_i$
 - 下の段：文脈を足したあとのベクトル $\boldsymbol{x}_i + \boldsymbol{z}_i$
 
-丸の色や大きさが上下で少し変わっているのが、文脈という情報が書き込まれた跡です。ベクトルは破壊されず、更新されました。
+丸の色や濃さが上下で少し変わっているのが、文脈という情報が書き込まれた跡です。ベクトルは破壊されず、更新されました。
+
+## microgpt.py ではこう書く
+
+マルチヘッドと残差までを、microgpt.py のアテンションブロック全体で見ると、こうです。
+
+```python
+x_residual = x                 # 残差用に、入る前のベクトルをとっておく
+x = rmsnorm(x)                 # アテンションの前に正規化（第4章）
+# ... q, k, v を作る（第5章）...
+x_attn = []
+for h in range(n_head):        # 4つのヘッドを順に回す
+    hs = h * head_dim
+    q_h = q[hs:hs+head_dim]     # 16次元を、4次元ずつのスライスに区切る
+    # ... このヘッドの head_out を計算（第5章）...
+    x_attn.extend(head_out)    # 4次元の結果を横に連結していく
+x = linear(x_attn, state_dict['layer0.attn_wo'])   # 連結した16次元に W_O を掛ける
+x = [a + b for a, b in zip(x, x_residual)]          # 残差：元のベクトルに足し戻す
+```
+
+`for h in range(n_head)` が4つの視点、`q[hs:hs+head_dim]` が16次元を4次元スライスに区切る部分、`x_attn.extend` が連結、`attn_wo` が数式の $W_O$ です。最後の1行が残差接続 $\boldsymbol{x} \leftarrow \boldsymbol{x} + \boldsymbol{z}$。冒頭で `x_residual` にとっておいた入る前のベクトルへ、アテンションの結果を足し戻しています。
 
 ## Scratch で書くときのポイント
 
