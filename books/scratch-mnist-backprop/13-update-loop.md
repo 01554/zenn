@@ -2,6 +2,8 @@
 title: "重みの更新と学習ループ"
 ---
 
+![](/images/scratch-mnist-backprop/tobira_13.png)
+
 ## 更新は引き算1回
 
 勾配が揃ったので、重みを動かします。

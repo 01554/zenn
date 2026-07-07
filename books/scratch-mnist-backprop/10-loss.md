@@ -2,6 +2,8 @@
 title: "損失：どれくらい外したかを1つの数にする"
 ---
 
+![](/images/scratch-mnist-backprop/tobira_10.png)
+
 ## 学習の作戦
 
 ここからが後半戦、学習です。作戦を先にぜんぶ書いておきます。

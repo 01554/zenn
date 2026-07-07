@@ -2,6 +2,8 @@
 title: "はじめに：Scratch だけで数字を覚えるAIを育てる"
 ---
 
+![](/images/scratch-mnist-backprop/tobira_01.png)
+
 ## この本でやること
 
 手書きの数字を見て「これは 2 だ」と当てるAIを、Scratch 3 だけで作ります。拡張機能は使いません。
