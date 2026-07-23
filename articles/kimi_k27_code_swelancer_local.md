@@ -3,7 +3,7 @@ title: "2bitに量子化したKimi K2.7 CodeにMac Studio 1台で$69,875を稼�
 emoji: "💰"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["LLM", "llamacpp", "Kimi", "SWELancer", "量子化"]
-published: false
+published: true
 ---
 
 お疲れ様です波浪です。
