@@ -70,7 +70,7 @@ tool_call: Bash("grep -ri \"choose file\" /app/expensify/src ...")
 
 ひとつだけ罠があって、routerの行列と補正バイアスをkeep順に並べ替える処理を間違えると、流暢にしゃべりながら全トークンを間違ったexpertに送るモデルが出来上がります。形は合ってるのでエラーは出ません。怖いですね。ここは恒等プルーン(何も削らない設定)の出力が元とバイト一致することをテストで確認してから本番を流しました。
 
-正直に書いておくと、この工程の頭脳部分は私のオリジナルではありません。expertの顕著性計測とどの640個を残すかの選定は、pipenetworkさんのkimi-k3-mlxリポジトリのスクリプト(reap_calibrate.py / reap_plan.py)をそのまま使わせてもらいました。校正コーパスの配合を英語+コードに変えただけです。私が書いたのは、その選定結果をGGUFに適用する(expert軸でスライスして詰め直す)200行くらいのスクリプトだけです。それはここに置いておきます。
+正直に書いておくと、この工程の頭脳部分は私のオリジナルではありません。expertの顕著性計測とどの640個を残すかの選定は、pipenetworkさんの[kimi-k3-mlx](https://github.com/PipeNetwork/kimi-k3-mlx)リポジトリのスクリプト(reap_calibrate.py / reap_plan.py)をそのまま使わせてもらいました。校正コーパスの配合を英語+コードに変えただけです。私が書いたのは、その選定結果をGGUFに適用する(expert軸でスライスして詰め直す)200行くらいのスクリプトだけです。それはここに置いておきます。
 
 https://github.com/01554/kimi-k3-gguf-prune
 
@@ -184,6 +184,6 @@ SWE-Lancer IC SWE(Diamond)から、K2.7が正解した最軽量3タスクで動�
 - ベースモデル: [unsloth/Kimi-K3-GGUF](https://huggingface.co/unsloth/Kimi-K3-GGUF) の UD-IQ1_S(594GB)。dynamic量子化の設計(重要層を8/16bit、routerとlayernormを高精度で保護)は[Unslothのドキュメント](https://unsloth.ai/docs/models/kimi-k3)と[DeepSeek-R1 1.58bitの記事](https://unsloth.ai/blog/deepseekr1-dynamic)に記載。一律低bit化はinfinite repetitionsを起こすという記述も後者より。
 - REAP: [CerebrasResearch/reap](https://github.com/CerebrasResearch/reap)。expertの顕著性をルーターゲート×出力ノルムで測る。
 - llama.cppのK3対応: [PR #26185](https://github.com/ggml-org/llama.cpp/pull/26185)(未マージ)。KDA+MLAハイブリッド、XTMLツール呼び出しパーサ、`--cache-reuse 0`が必要な理由(KDA再帰状態の破損)もこのPRの議論に記載。ビルドはUnslothフォークのPR 48ブランチを使用。
-- MLX版REAPビルド: pipenetworkのKimi-K3-REAP73/REAPgraded(kimi-k3-mlx)。本記事の顕著性計測と選定はこのリポジトリのスクリプト(reap_calibrate.py / reap_plan.py)をそのまま使用。校正コーパスに含まれないものは黙って刈り取られる、en+code校正で中国語がtotal collapseする、という実測もこのリポジトリのREADMEより。本文でだめだったと書いたMLXビルドの作者に、枝刈りの道具一式で助けられているという構図です。
+- MLX版REAPビルド: pipenetworkの[kimi-k3-mlx](https://github.com/PipeNetwork/kimi-k3-mlx)(Kimi-K3-REAP73/REAPgraded)。本記事の顕著性計測と選定はこのリポジトリのスクリプト(reap_calibrate.py / reap_plan.py)をそのまま使用。校正コーパスに含まれないものは黙って刈り取られる、en+code校正で中国語がtotal collapseする、という実測もこのリポジトリのREADMEより。本文でだめだったと書いたMLXビルドの作者に、枝刈りの道具一式で助けられているという構図です。
 - 検証環境: SWE-Lancer(OpenAI、arXiv:2502.12115)のIC SWE Diamond。エージェントは[MoonshotAI/kimi-code](https://github.com/MoonshotAI/kimi-code) v0.30.0をタスクコンテナ内で実行(`kimi -p`、`--auto`や`-y`は`-p`と併用不可)。採点は無改変。
 - 前回: [2bitに量子化したKimi K2.7 CodeにMac Studio 1台で$69,875を稼いでもらった](https://zenn.dev/hellohazime/articles/kimi_k27_code_swelancer_local)

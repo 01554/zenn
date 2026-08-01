@@ -56,7 +56,7 @@ K3の負荷分散はQuantile Balancing(§2.3.3)です。ルーターのスコア
 
 そのトークンにとって本来のTop-16のうち、削られた分だけ、本来17位以下のexpertが繰り上がって入ります。重みは選ばれた16個の中で再正規化されて合計1に戻る(式13の仕組みそのまま)。さらにK3は、選ばれたexpertの出力を集めた後にRMSNormを挟んでから全幅に戻します(§2.3.1)。reportはこれを、選ばれたexpertの顔ぶれでスケールが変わる感度を下げるため、と説明しています。訓練安定化のための設計らしいんですが、expertの顔ぶれを強制的に変える枝刈りにとってはそのまま保険になります。
 
-kimi-k3-mlxのREADMEに、このRMSNormのおかげでK3は普通のMoEよりpruningに強いのでは、という推測が書いてあって、reportを読んだらその根拠が設計意図として書いてありました。答え合わせできた気分です。
+[kimi-k3-mlx](https://github.com/PipeNetwork/kimi-k3-mlx)のREADMEに、このRMSNormのおかげでK3は普通のMoEよりpruningに強いのでは、という推測が書いてあって、reportを読んだらその根拠が設計意図として書いてありました。答え合わせできた気分です。
 
 だから出力は壊れずに出てきます。問題は品質のほうで、繰り上がった代役は本来の担当より下手です。欠けが1〜2個なら実害はほぼ無し。93.5%保持というのは、大半のトークンで本来のTop-16がほぼ揃うという意味です。欠けが増えると予測が鈍って、ほぼ全滅したドメインでは、1トークンずつはそれらしいのに誤差が生成の中で積み上がって、ループに落ちます。前回の`The folder is a folder.`の無限ループは、73%削ったビルドでこれが起きたものです。エラーは最後まで出ません。ここは本当に嫌なところで、流暢なまま壊れます。
 
@@ -85,4 +85,4 @@ kimi-k3-mlxのREADMEに、このRMSNormのおかげでK3は普通のMoEよりpru
 - 前回記事: [594GBのKimi K3を441GBに枝刈りして、Mac Studio 1台でエージェントとして動かした](https://zenn.dev/hellohazime/articles/kimi_k3_reap640_512gb_mac)。ドメイン重なりの実測、93.5%保持、73%削減ビルドの崩壊の詳細はこちら。
 - REAP: [CerebrasResearch/reap](https://github.com/CerebrasResearch/reap)。
 - ルーター精度と無限反復: [Unsloth: DeepSeek-R1 Dynamic 1.58-bit](https://unsloth.ai/blog/deepseekr1-dynamic)。
-- kimi-k3-mlx(pipenetwork): RMSNormとpruning頑健性の推測はこのリポジトリのREADMEより。
+- [kimi-k3-mlx](https://github.com/PipeNetwork/kimi-k3-mlx)(pipenetwork): RMSNormとpruning頑健性の推測はこのリポジトリのREADMEより。前段の実測表(ドメイン重なり)もこのリポジトリ由来。
