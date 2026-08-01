@@ -70,7 +70,9 @@ tool_call: Bash("grep -ri \"choose file\" /app/expensify/src ...")
 
 ひとつだけ罠があって、routerの行列と補正バイアスをkeep順に並べ替える処理を間違えると、「流暢にしゃべりながら全トークンを間違ったexpertに送るモデル」が出来上がります。形は合ってるのでエラーは出ません。怖いですね。ここは恒等プルーン(何も削らない設定)の出力が元とバイト一致することをテストで確認してから本番を流しました。
 
-正直に書いておくと、この工程の頭脳部分は私のオリジナルではありません。**expertの顕著性計測と「どの640個を残すか」の選定は、pipenetworkさんのkimi-k3-mlxリポジトリのスクリプト(reap_calibrate.py / reap_plan.py)をそのまま使わせてもらいました**。校正コーパスの配合を英語+コードに変えただけです。私が書いたのは、その選定結果をGGUFに適用する(expert軸でスライスして詰め直す)200行くらいのスクリプトだけです。
+正直に書いておくと、この工程の頭脳部分は私のオリジナルではありません。**expertの顕著性計測と「どの640個を残すか」の選定は、pipenetworkさんのkimi-k3-mlxリポジトリのスクリプト(reap_calibrate.py / reap_plan.py)をそのまま使わせてもらいました**。校正コーパスの配合を英語+コードに変えただけです。私が書いたのは、その選定結果をGGUFに適用する(expert軸でスライスして詰め直す)200行くらいのスクリプトだけです。それはここに置いておきます。
+
+https://github.com/01554/kimi-k3-gguf-prune
 
 余談ですが、441GBをHugging Faceにアップロードしたとき、最後の45GBのシャードで実際に転送された新規データは**815MBだけ**でした。HFのXet重複排除が、Unslothの元リポジトリとバイト一致するチャンクを勝手に見つけてくれたんですね。「再量子化してない」という主張をアップロード基盤が証明してくれた形で、ちょっと感動しました。
 
@@ -131,7 +133,7 @@ SWE-Lancer IC SWE(Diamond)から、K2.7が正解した最軽量3タスクで動�
 
 ## 文献ノート
 
-- モデル本体: [hellohazime/Kimi-K3-REAP640-IQ1_S-GGUF](https://huggingface.co/hellohazime/Kimi-K3-REAP640-IQ1_S-GGUF)(441.4GB、10シャード)。
+- モデル本体: [hellohazime/Kimi-K3-REAP640-IQ1_S-GGUF](https://huggingface.co/hellohazime/Kimi-K3-REAP640-IQ1_S-GGUF)(441.4GB、10シャード)。GGUFスライスのコードとテスト: [01554/kimi-k3-gguf-prune](https://github.com/01554/kimi-k3-gguf-prune)(MIT)。
 - ベースモデル: [unsloth/Kimi-K3-GGUF](https://huggingface.co/unsloth/Kimi-K3-GGUF) の UD-IQ1_S(594GB)。dynamic量子化の設計(重要層を8/16bit、routerとlayernormを高精度で保護)は[Unslothのドキュメント](https://unsloth.ai/docs/models/kimi-k3)と[DeepSeek-R1 1.58bitの記事](https://unsloth.ai/blog/deepseekr1-dynamic)に記載。「一律低bit化はinfinite repetitionsを起こす」という記述も後者より。
 - REAP: [CerebrasResearch/reap](https://github.com/CerebrasResearch/reap)。expertの顕著性をルーターゲート×出力ノルムで測る。
 - llama.cppのK3対応: [PR #26185](https://github.com/ggml-org/llama.cpp/pull/26185)(未マージ)。KDA+MLAハイブリッド、XTMLツール呼び出しパーサ、`--cache-reuse 0`が必要な理由(KDA再帰状態の破損)もこのPRの議論に記載。ビルドはUnslothフォークのPR 48ブランチを使用。
