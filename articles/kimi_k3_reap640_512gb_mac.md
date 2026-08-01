@@ -10,7 +10,7 @@ published: false
 
 [前回](https://zenn.dev/hellohazime/articles/kimi_k27_code_swelancer_local)、2bitのKimi K2.7 CodeにMac Studio 1台で$69,875稼がせた話を書きました。今回はその続編、K3です。
 
-結論から。Kimi K3(2.78T)がMac Studio(Apple M3 Ultra、512GB)1台で、エージェントとして動きました。Moonshot純正のKimi Code CLIを繋いで、SWE-Lancerの実タスク3/3正解、$2,000/$2,000。モデルはHugging Faceに置いてあります。
+結論から。Kimi K3(2.78T)がMac Studio(Apple M3 Ultra、512GB)1台で、エージェントとして動きました。Moonshot純正のKimi Code CLIを繋いで、SWE-Lancerの実タスク8本中5本正解、$3,500。しかもそのうち2本は、前回2bitのK2.7が解けなかった問題です。モデルはHugging Faceに置いてあります。
 
 https://huggingface.co/hellohazime/Kimi-K3-REAP640-IQ1_S-GGUF
 
