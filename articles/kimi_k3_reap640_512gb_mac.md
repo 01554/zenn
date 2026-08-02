@@ -1,14 +1,14 @@
 ---
-title: "594GBのKimi K3を441GBに枝刈りして、Mac Studio 1台でエージェントとして動かした"
+title: "Kimi K3を441GBに枝刈りして、Mac Studio 1台で動かした"
 emoji: "✂️"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["LLM", "llamacpp", "Kimi", "SWELancer", "量子化"]
-published: false
+topics: ["LLM", "llamacpp", "Kimi",  "K3","SWELancer"]
+published: true
 ---
 
 お疲れ様です波浪です。
 
-[前回](https://zenn.dev/hellohazime/articles/kimi_k27_code_swelancer_local)、2bitのKimi K2.7 CodeにMac Studio 1台で$69,875稼がせた話を書きました。今回は、最近流行りのK3です。前回の失敗を活かして自分の中でも熱があるうちにBLOGにしました。
+今回は、最近流行りのKimi K3です。前回の失敗を活かして自分の中でも熱があるうちにBLOGにしました。
 
 結論。枝刈りしたKimi K3がMac Studio(Apple M3 Ultra、512GB)1台で動きました。ハーネスとしてKimi Code CLIを繋いで、SWE-Lancerの実タスク8本中5本正解、$3,500。そのうち2本は、前回2bitのK2.7が解けなかった問題でした。
 
@@ -54,7 +54,7 @@ The folder is a folder. The folder is a folder. The folder is a folder. ...
 https://x.com/UnslothAI/status/2082463988953367031
 
 記事によると594GBだから、MacStudio+RAM128Gで動くぞ、とのことで、DGX Sparkを組み合わせれば動くんやな、とは思っていたんですが、DGX Sparkは他の学習に使っていたので後回しにしていました。
-とりあえず確かめるために、1bit版を、ディスクオフロードで無理やり動かして(3時間かかった)、MLX版を毎回壊してたのと同じリクエストを投げました。返ってきたのは:
+とりあえず確かめるために、1bit版を、SSDオフロードで無理やり動かして(3時間かかった)、MLX版を毎回壊してたのと同じリクエストを投げました。返ってきたのは:
 
 ```
 tool_call: Bash("grep -ri \"choose file\" /app/expensify/src ...")
@@ -162,7 +162,7 @@ Kimi Code CLIはOpenAI互換設定でそのまま繋がります。前回あん�
 
 ## 結果
 
-SWE-Lancer IC SWE(Diamond)から、K2.7が正解した最軽量3タスクで動作確認しました。
+SWE-Lancer IC SWE(Diamond)から、K2.7が正解した3タスクで動作確認しました。
 
 | タスク | 結果 | 報酬 | 参考: MLX版K3 |
 |---|---|---|---|
@@ -172,7 +172,7 @@ SWE-Lancer IC SWE(Diamond)から、K2.7が正解した最軽量3タスクで動�
 
 3タスクで3.4時間(68分/タスク)。実行はコンテナ内のKimi Code CLIが全部やって、採点は元のSWE-Lancerのまま一切触っていません。
 
-追試もやりました。前回K2.7が正解できなかった105タスクから、入力が軽い順に5つ選んで、同じ構成で走らせたものです。
+追試もやりました。前回K2.7が正解できなかった105タスクから5つ選んで、実行。
 
 | タスク | K2.7(2bit、341GB) | K3 REAP640(1bit、441GB) | 報酬 |
 |---|---|---|---|
@@ -184,7 +184,7 @@ SWE-Lancer IC SWE(Diamond)から、K2.7が正解した最軽量3タスクで動�
 
 2/5。K2.7に解けなかった問題を、1bitまで削ってexpertを256個間引いたK3が2つ通しました。n=5なので強くは言いませんが、こんだけ削ってもK2.7より高性能の可能性が高そう。実際に198タスク動かせばベンチも取れますが、decode約3.0トークン/秒、prefill約47トークン/秒。前回のK2.7より遅いので、ベンチが回り切るまで60日コース。
 
-前回のK2.7（13日）の4倍以上、さすがに。うーん？厳しいですね、やってる間にK3が時代遅れになってお蔵入りしちゃいそう...
+前回のK2.7（13日）の4倍以上、さすがに。うーん？厳しいですね、やってる間にK3が時代遅れになってお蔵入りしちゃいそうだわ...
 
 
 ## 注意書き
