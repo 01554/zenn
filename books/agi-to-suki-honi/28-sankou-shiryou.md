@@ -180,9 +180,6 @@ free: true
 
 ## 第12章　そつのない答えでも、行き先は決まらない
 
-- Hanushek, E. A., Schwerdt, G., Woessmann, L., & Zhang, L. (2017). “General Education, Vocational Education, and Labor-Market Outcomes over the Lifecycle.” *Journal of Human Resources*, 52(1), 48–87. https://doi.org/10.3368/jhr.52.1.0415-7074R
-- Hampf, F., & Woessmann, L. (2017). “Vocational vs. General Education and Employment over the Life Cycle: New Evidence from PIAAC.” *CESifo Economic Studies*, 63(3), 255–269. https://doi.org/10.1093/cesifo/ifx012
-- Deming, D. J., & Noray, K. (2020). “Earnings Dynamics, Changing Job Skills, and STEM Careers.” *Quarterly Journal of Economics*, 135(4), 1965–2005. https://doi.org/10.1093/qje/qjaa021
 - 電気用品安全法（昭和36年法律第234号）. e-Gov法令検索. https://laws.e-gov.go.jp/law/336AC0000000234
 - 道路運送車両法（昭和26年法律第185号）. e-Gov法令検索. https://laws.e-gov.go.jp/law/326AC0000000185
 - 製造物責任法（平成6年法律第85号）. e-Gov法令検索. https://laws.e-gov.go.jp/law/406AC0000000085
