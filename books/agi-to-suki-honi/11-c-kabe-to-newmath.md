@@ -103,7 +103,7 @@ title: "第11章 未来の地図だけでは、学校は変わらない"
 #### ニューマス
 
 - Christopher J. Phillips, *The New Math: A Political History*, University of Chicago Press, 2015, ISBN 9780226184968. https://press.uchicago.edu/ucp/books/book/chicago/N/bo18991075.html
-- Phillipsによれば、源流となるUniversity of Illinois Committee on School Mathematicsは1951年に始まった。1957年のスプートニクは既存の改革を全国規模へ拡大した。本文の「スプートニクが改革を生んだのではない」はこの時系列による。同書は、数百人の数学者、教師、親が改革に関わった政治史と、1965年時点でニューマスを教える研修を受けた小学校教師が5%だったことを記録する。
+- Phillipsによれば、源流となるUniversity of Illinois Committee on School Mathematicsは1951年に始まった。1957年のスプートニクは既存の改革を全国規模へ拡大した。本文の「スプートニクはアメリカ教育改革の規模を一気に広げました」(改革の源流はスプートニク前)は、この時系列による。同書は、数百人の数学者、教師、親が改革に関わった政治史と、1965年時点でニューマスを教える研修を受けた小学校教師が5%だったことを記録する。
 - Morris Kline, *Why Johnny Can't Add: The Failure of the New Math*, St. Martin’s Press, 1973. https://archive.org/details/whyjohnnycantadd00klin
 - Klineは、抽象構造へ授業時間を振り向けたことで計算や応用が軽視されたと批判した。この批判書は政策の退潮を促したが、ニューマスが全国の計算力を下げたことを示す導入前後の全国的な因果測定ではない。1975年のNational Advisory Committee on Mathematical Education報告を含む今回確認した当時の調査にも、単一の改革について全国共通の導入前後を比べた因果測定は見つからなかった。「存在しない」ことを網羅的に証明した検索ではない。本文は、Klineの批判と因果の確定を分けた。
 
@@ -112,7 +112,7 @@ title: "第11章 未来の地図だけでは、学校は変わらない"
 - Larry Cuban, “The Open Classroom: Were Schools Without Walls Just Another Fad?”, *Education Next*, 4(2), 2004. https://www.educationnext.org/theopenclassroom/ ／ https://eric.ed.gov/?id=EJ763250
 - Cubanは、イギリスのPlowden Report(1967)を経た子ども中心の教育がアメリカへ広がり、1970年代前半の新築校に壁のない設計が多数採用され、1970年代末までに運動が退潮した経過を整理する。オープンプランは本来、柔軟な集団編成や複数教師による指導と組み合わせる構想であり、壁だけを取り除く計画ではなかった。
 - Bridget Shield, Emma Greenland and Julie Dockrell, “Noise in open plan classrooms in primary schools: A review,” *Noise & Health*, 12(49), 2010, pp.225–234. https://doi.org/10.4103/1463-1741.70501
-- 同レビューは、オープンプラン教室の騒音研究が1970年代前半から行われ、妨害音声が聞き取りや課題成績を悪化させる知見が蓄積したことをまとめる。本文の「道具固有の害が測られた」は、壁のない空間に伴う音響上の問題についての判定であり、柔軟な集団学習という理念全体への判定ではない。
+- 同レビューは、オープンプラン教室の騒音研究が1970年代前半から行われ、妨害音声が聞き取りや課題成績を悪化させる知見が蓄積したことをまとめる。本文の四区分でいう「道具そのものが害を生んだか」に、音響上の問題として答える測定であり、柔軟な集団学習という理念全体への判定ではない。
 - ニュージーランドの一回目は、Cameron & Robinson (1986), “Ten Years of Open Plan”を参照した。1975年までに113の新設・設計と87の既存教室改修を合わせた200ユニットが稼働し、1980年代には一部の学校で壁が戻された。200ユニットすべてが新築され、すべてに壁が戻ったという資料ではない。https://www.nzcer.org.nz/nzcerpress/set/articles/ten-years-open-plan
 - 二回目は、教育省の *The New Zealand School Property Strategy 2011–2021* と、Michael Johnston, *No Evidence, No Evaluation, No Exit*, New Zealand Initiative, 2022を参照した。2022年の情報公開請求に、教育省は対象教室の数、費用、効果を答えられなかった。https://www.nzinitiative.org.nz/reports-and-media/reports/no-evidence-no-evaluation-no-exit-lessons-from-the-modern-learning-environments-experiment/
 - 2025年7月16日の教育相発表は、常時開放型の新設をやめ、ガラスの引き戸で開閉できる標準設計へ移る方針である。昔の単学級教室への全面回帰ではなく、柔軟な学びを禁じたものでもない。https://www.beehive.govt.nz/release/government-calls-time-open-plan-classrooms
@@ -124,7 +124,7 @@ title: "第11章 未来の地図だけでは、学校は変わらない"
 - 「一人の先生が配りきれない判断を、学校の外で塾が担ってきた」は、韓国の私教育の規模と個別指導の形、および教育部が掲げた「すべての子に個別最適の教育」をつないだ本書の整理である。一人の教師が各児童の次の課題を毎時間選べないことを直接測った調査の引用ではない。
 - 2025年3月の開始時点で、国会の反対を受け、初年度は学校が採用を選ぶ形になった。初・中等教育法の改正案は2025年8月4日に国会で可決され、8月14日に法律第21013号として公布され、同日に施行された。教科書の定義が書籍と電子書籍に限られ、AIDTは任意の教育資料になった。利用は禁止されていない。公布・施行と改正文は国家法令情報センターの法令本文で確認した。https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=273351 ／ https://opinion.lawmaking.go.kr/gcom/nsmLmSts/out/2211647/detailRP
 - 採択率は1学期37%(4,146校)から2学期19%(2,095校)へ下がった。経過の取材はRest of WorldとKorea Heraldも参照した。https://restofworld.org/2025/south-korea-ai-textbook/ ／ https://www.koreaherald.com/article/10546695
-- 反対理由として挙がった内容の誤り、個人情報、画面時間、教員研修、費用などは、異なる調査と報道に分散している。いずれもAIDTの学力効果を判定する比較試験ではない。本文の「効果を確かめる前に制度が退いた」は、この区別による。
+- 反対理由として挙がった内容の誤り、個人情報、画面時間、教員研修、費用などは、異なる調査と報道に分散している。いずれもAIDTの学力効果を判定する比較試験ではない。本文の「効果を確かめる前に、制度が退きました」は、この区別による。
 - 超教育協会「先生のAI活用授業の力量を育むことがまずは大切　第207回オンラインシンポレポート・後半」2026年7月10日公開。シンポジウムは2026年5月13日に開かれた。韓国教育学術情報院(KERIS)主任研究員の曺圭福は、公開質疑で、教科ごとの教員研修が不可欠であり、日本への助言として最も重要なのは先生だと答えた。個々の学校教員への取材ではなく、韓国の制度と現場を調査する一人のKERIS研究員への質疑である。https://lot.or.jp/project/17071/ ／ https://lot.or.jp/report/16482/
 
 #### デジタル教科書とデンマーク
@@ -134,8 +134,8 @@ title: "第11章 未来の地図だけでは、学校は変わらない"
 - 本文の三分類は、日本の制度、デンマークの広いデジタル教材、韓国AIDTの機能を混同しないために本書が置いた整理である。
 - France24, “Back to textbooks: Denmark rolls back digital learning,” 2026年1月6日。https://www.france24.com/en/tv-shows/focus/20260106-back-to-textbooks-denmark-rolls-back-digital-learning
 - デンマーク政府・自治体連合『En digital folkeskole』(2011)は、デジタル教材購入補助、流通、無線網、端末、試験、目標、研究開発を一つの改革に束ねた。国の五億クローネは四年間に配られ、主として教材購入の補助に使う設計だった。https://www.ft.dk/samling/20101/almdel/udu/bilag/334/1026036.pdf
-- EVA『Inspiration til it-didaktisk og innovativ undervisning』(2016)は、二十八の実証校で、外部専門家、具体的な授業への助言、観察と振り返り、教員チームの時間、管理職支援を組み合わせた。本文の「実証校では起きた」は同報告の事例に基づく。https://eva.dk/Media/638478973504082248/Inspiration%20til%20it-didaktisk%20og%20innovativ%20undervisning.pdf
-- Rambøll・STIL『Evaluering af it i folkeskolen』(2018)は、完成品型のデジタル教材を伝達型に高い・非常に高い程度で使う教師が60%、練習型では48%だった一方、プロジェクト型とデザイン・制作型では「全く使わない」が32～33%だったと報告した。本文の「説明と反復練習が広く使われた」は、この用途別集計による。https://uvm.dk/media/cg0db2cz/180619-evaluering-af-it-i-folkeskolen-endelig-rapport-v-4-juni.pdf
+- EVA『Inspiration til it-didaktisk og innovativ undervisning』(2016)は、二十八の実証校で、外部専門家、具体的な授業への助言、観察と振り返り、教員チームの時間、管理職支援を組み合わせた。本文の実証校の記述(個別化、共同作業、読み書きの支援)は、同報告の事例に基づく。https://eva.dk/Media/638478973504082248/Inspiration%20til%20it-didaktisk%20og%20innovativ%20undervisning.pdf
+- Rambøll・STIL『Evaluering af it i folkeskolen』(2018)は、完成品型のデジタル教材を伝達型に高い・非常に高い程度で使う教師が60%、練習型では48%だった一方、プロジェクト型とデザイン・制作型では「全く使わない」が32～33%だったと報告した。本文の「広く使われていたのは、画面上の説明と反復練習です」は、この用途別集計による。https://uvm.dk/media/cg0db2cz/180619-evaluering-af-it-i-folkeskolen-endelig-rapport-v-4-juni.pdf
 - 教育省傘下のIT・学習庁『Lærerens digitale hverdag』(2021)では、回答した教師の62%がデジタル教材などを同量、25%が増量して使いたいと答えた。87%は両者の合計である。教師五百二十人、回答率28%、調査は新型コロナ下の2020年11～12月に行われた。https://uvm.dk/media/rwyp3ljw/210621-rapporten-laererens-digitale-hverdag.pdf
 - ICILS 2018で、デンマークのコンピュータ・情報リテラシーは参加十二か国中首位だった。デジタル政策だけの因果効果ではないが、政策期間に得たものがなかったという主張を退ける資料になる。https://uvm.dk/ministeriet/internationalt-arbejde/internationale-undersoegelser/icils/icils-2018/
 - 教育相らの寄稿「Skærme i skolen skal begrundes pædagogisk」(2023年2月)は、画面の前にいる子を「小さなオフィス人間」と表現した。全面否定ではなく、教育上の理由を求める主張だったが、本文では2011年の未来像と政治言語の向きが逆転した節目として使った。https://uvm.dk/aktuelt/nyheder/2023/februar/230220-skaerme-i-skolen-skal-begrundes-paedagogisk/

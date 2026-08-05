@@ -197,7 +197,7 @@ free: true
 
 - デンマーク政府『Faglighed og frihed』(2010)は、子どものノートパソコンが電卓や筆箱と同じほど普通になる将来像、家庭の端末の活用、持たない子への公的支援、五億クローネの投資を示した。https://regeringen.dk/media/s51bt2n3/faglighed_og_frihed.pdf
 - デンマーク政府・自治体連合『En digital folkeskole』(2011)は、①デジタル教材購入補助、②教材流通、③無線網、④端末、⑤デジタル試験、⑥明確な目標、⑦研究開発を七施策とした。pp.7–10。国の五億クローネは四年間に配られ、主として教材の購入力強化に使う設計だった。自治体は最大十億クローネを追加し、合計は最大十五億クローネ。本文の予算批判は、改革の全支出が五億クローネだけだったという意味ではない。https://www.ft.dk/samling/20101/almdel/udu/bilag/334/1026036.pdf
-- 同文書pp.5–6は、教師が基礎的IT知識を持っていても授業統合には不安があり、ITが従来授業の補助に留まりやすいことを出発時点で認める。2006年調査では、過去三年に教師の約三分の二がIT能力開発を受けた一方、利用増への明確な効果は確認されず、複数の道具を理解して試す教師は20%だった。本文の「政府は知っていた」は、戦略自身が認めた問題を指す。
+- 同文書pp.5–6は、教師が基礎的IT知識を持っていても授業統合には不安があり、ITが従来授業の補助に留まりやすいことを出発時点で認める。2006年調査では、過去三年に教師の約三分の二がIT能力開発を受けた一方、利用増への明確な効果は確認されず、複数の道具を理解して試す教師は20%だった。本文の「政府は、出発時点から難しさを知っていました」は、戦略自身が認めた問題を指す。
 - 『The Digital Path to Future Welfare: eGovernment Strategy 2011–2015』pp.21–23は、子どもごとの水準・速度・方法、特別な必要のある子の包摂、オンライン情報の批判的評価、新しい媒体での表現、国境を越えた共同作業、教師の時間の有効利用を掲げる。接続だけでは成果にならず、地域目標、評価、研究が必要とも記す。EUの相互運用政策資料庫に保存された政府英訳: https://interoperable-europe.ec.europa.eu/collection/egovernment/document/digital-path-future-welfare
 - 同戦略p.22の原文は「fotokopier og slidte kladdehæfter」、政府英訳は「photocopies and dog-eared notebooks」。kladdehæfterは下書き帳・練習帳で、教科書を意味するlærebøgerではない。「コピーの束とすりきれた教科書」は誤訳である。本文では「コピー教材と使い古した練習帳」とした。
 - 円換算は、2011年の五億クローネをデンマークの消費者物価で2025年水準へ直し、2026年の購買力平価で円に換えた概算。約百億円になる。直近に決まった五億四千万クローネと二十六億クローネは物価補正をせず、それぞれ約八十六億円、約四百十億円とした。世界銀行の消費者物価指数とIMFの購買力平価を使った。https://data.worldbank.org/indicator/FP.CPI.TOTL?locations=DK ／ https://www.imf.org/external/datamapper/PPPEX@WEO
@@ -246,7 +246,7 @@ free: true
 - 教育相Mattias Tesfaye、与党教育担当Anni Mathiesen、Rasmus Lund-Nielsenの連名寄稿「Skærme i skolen skal begrundes pædagogisk」(2023年2月11日掲載、教育省頁2月19日)は、蝶を画面で学ぶ子、コンピュータで文学を読む子、TikTokを見る休み時間を挙げ、「小さなオフィスワーカー」と表現した。同時に、デジタル機器を全面否定せず、デジタル社会へ備える必要と、特別な必要のある子への利点も認めている。https://uvm.dk/aktuelt/nyheder/2023/februar/230220-skaerme-i-skolen-skal-begrundes-paedagogisk/
 - 2023年6月16日、教育相は学校などで画面が多くなりすぎないための勧告作成を教育・質庁(STUK)へ命じた。https://uvm.dk/aktuelt/publikationer/2023/juni/230616-opdrag-for-arbejde-om-brug-af-skaerme-i-fritidstilbud-grundskolen-og-paa-ungdomsuddannelser/
 - 2024年2月の勧告は、携帯電話を預ける、授業と無関係なサイトを遮断する、デジタル機器を教育上適切なときだけ使う、紙とデジタルの均衡を取ることを求める。https://uvm.dk/aktuelt/nyheder/2024/februar/240205anbefalinger-om-skaermbrug-klar-til-grundskoler-og-fritidstilbud/ ／ https://uvm.dk/media/0zfnyiyy/240205anbefalinger-grundskole-final.pdf
-- 本文の「2011年と2023年は向きが逆の媒体決定論」は、本書の評価である。2023年の寄稿者自身は、単純な機械排斥ではないと明記している。
+- 本文の「今度は向きが逆です」を、道具から結果を断定する向きが反転した、と読むのは本書の評価である。2023年の寄稿者自身は、単純な機械排斥ではないと明記している。
 
 #### 2024年学校パネルの質問と数字
 
@@ -275,7 +275,7 @@ free: true
 - アメリカのCommon Core State Standardsは、四年生のWriting Standard 6で、技術とインターネットを使って文章を作り、一度に最低一頁を入力できるタイピング技能を求めた。筆記体は、共通基準に含めなかった。Common Coreは連邦政府による筆記体禁止ではなく、州や学区が筆記体を残すこともできた。https://www.thecorestandards.org/ELA-Literacy/W/4/
 - Debra Collette et al., “Handwriting and Common Core State Standards: Teacher, Occupational Therapist, and Administrator Perceptions From New York State Public Schools,” American Journal of Occupational Therapy, 71(6), 2017, DOI: 10.5014/ajot.2017.021808。ニューヨーク州の小学校教員、作業療法士、管理職への質問紙と聞き取りから、Common Core導入後に手書き指導の時間が減り、指導法も一貫しなくなったという主題を抽出した。全国の授業時間を測った調査でも、Common Coreだけの因果効果を推定した研究でもない。https://pubmed.ncbi.nlm.nih.gov/29135428/
 - 米教育省教育統計センター(NCES)『Changes in Instructional Hours in Four Subjects by Public School Teachers of Grades 1 Through 4』(2007)は、全国のSchools and Staffing Surveyを使い、1999–2000年度から2003–04年度に、英語の週間指導時間が増え、数学、社会科・歴史、理科は減ったと報告した。四教科を合わせた学校週内の比率はほぼ変わらず、一つを増やすと別の時間が押し出される実例である。記述統計なので、特定政策だけを原因とするものではない。https://nces.ed.gov/use-work/resource-library/report/statistics-brief/changes-instructional-hours-four-subjects-public-school-teachers-grades-1-through-4-issue-brief
-- デンマークの2018年評価では、自治体担当者の68%がアナログ教材への支出は近年減ったと答えた。紙の教材を禁止する政策がなくても、デジタル教材と機器の購入が広がった時期に、紙の選択肢は細った。本文の「デジタルは紙を禁止せずに退潮させた」は、この支出認識と2024年の紙不足回答を結んだ本書の評価であり、個々の購入費を追跡した因果推定ではない。逆向きの配分変更でデジタルも同じように退潮しうる、という部分も本書の制度的な推論である。
+- デンマークの2018年評価では、自治体担当者の68%がアナログ教材への支出は近年減ったと答えた。紙の教材を禁止する政策がなくても、デジタル教材と機器の購入が広がった時期に、紙の選択肢は細った。本文の「デジタルは、紙を禁止せずに退潮させた」は、この支出認識と2024年の紙不足回答を結んだ本書の評価であり、個々の購入費を追跡した因果推定ではない。逆向きの配分変更でデジタルも同じように退潮しうる、という部分も本書の制度的な推論である。
 - 本文は、アメリカの二例がデンマークでも同じ結果を生むと推定していない。禁止の有無だけでは実際の存続を判断できず、基準、予算、時間、評価の配分を見なければならない、という制度上の仕組みを示す比較である。
 
 #### 紙の本、端末管理、日本との違い

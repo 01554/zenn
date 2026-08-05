@@ -77,6 +77,8 @@ free: true
 
 ## 第6章　道は、歩いてできる
 
+- Craske, M. G., Treanor, M., Conway, C. C., Zbozinek, T., & Vervliet, B. (2014). “Maximizing Exposure Therapy: An Inhibitory Learning Approach.” *Behaviour Research and Therapy*, 58, 10–23. https://doi.org/10.1016/j.brat.2014.04.006
+
 - Chinese Text Project. *Zhuangzi*, “Discussion on Making All Things Equal.” https://ctext.org/zhuangzi/adjustment-of-controversies
 - Bornstein, R. F. (1989). “Exposure and Affect: Overview and Meta-Analysis of Research, 1968–1987.” *Psychological Bulletin*, 106(2), 265–289. https://doi.org/10.1037/0033-2909.106.2.265
 - Birch, L. L., & Marlin, D. W. (1982). “I Don't Like It; I Never Tried It: Effects of Exposure on Two-Year-Old Children's Food Preferences.” *Appetite*, 3(4), 353–360. https://doi.org/10.1016/S0195-6663(82)80053-6
@@ -189,16 +191,13 @@ free: true
 
 - Bellaiche, L., Shahi, R., Turpin, M. H., Ragnhildstveit, A., Sprockett, S., Barr, N., Christensen, A., & Seli, P. (2023). “Humans versus AI: Whether and Why We Prefer Human-Created Compared to AI-Created Artwork.” *Cognitive Research: Principles and Implications*, 8, 42. https://doi.org/10.1186/s41235-023-00499-6
 - van Hees, J., Grootswagers, T., Quek, G. L., & Varlet, M. (2025). “Human Perception of Art in the Age of Artificial Intelligence.” *Frontiers in Psychology*, 15, 1497469. https://doi.org/10.3389/fpsyg.2024.1497469
-- Spee, B. T. M., Pelowski, M., Arato, J., Mikuni, J., Tran, U. S., Eisenegger, C., & Leder, H. (2022). “Social Reputation Influences on Liking and Willingness-to-Pay for Artworks: A Multimethod Design Investigating Choice Behavior along with Physiological Measures and Motivational Factors.” *PLOS ONE*, 17(4), e0266020. https://doi.org/10.1371/journal.pone.0266020
-- Brown, S. C., & Knox, D. (2017). “Why Go to Pop Concerts? The Motivations behind Live Music Attendance.” *Musicae Scientiae*, 21(3), 233–249. https://doi.org/10.1177/1029864916650719
-- Melcher, J. M., & Schooler, J. W. (1996). “The Misremembrance of Wines Past: Verbal and Perceptual Expertise Differentially Mediate Verbal Overshadowing of Taste Memory.” *Journal of Memory and Language*, 35(2), 231–245. https://doi.org/10.1006/jmla.1996.0013
+- Tsay, C.-J. (2013). “Sight over sound in the judgment of music performance.” *PNAS*, 110(36), 14580–14585. https://doi.org/10.1073/pnas.1221454110
 - MacIntyre, A. (2007). *After Virtue: A Study in Moral Theory*, 3rd ed. University of Notre Dame Press.
 
 ## 第14章　機がひとりでに布を織るなら
 
 - Aristotle. *Politics*. Translated by H. Rackham. Loeb Classical Library 264. Harvard University Press, 1932. Books I.4, VII.14, VIII.1, VIII.3. https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0058
 - Aristotle. *The Nicomachean Ethics*. Translated by H. Rackham. Revised edition. Loeb Classical Library 73. Harvard University Press, 1934. Book X.7. https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0054%3Abekker%20page%3D1177b
-- Destrée, P. (2013). “Education, Leisure, and Politics.” In M. Deslauriers & P. Destrée (Eds.), *The Cambridge Companion to Aristotle's Politics*, 301–323. Cambridge University Press. https://doi.org/10.1017/CCO9780511791581.013
 - Liddell, H. G., Scott, R., Jones, H. S., & McKenzie, R. *A Greek-English Lexicon*, 9th ed., s.v. “σχολή.” https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionaries.v1%3Alsj-n101959/
 - Oxford University Press. “school, noun.” *Oxford Advanced Learner's Dictionary*, Word Origin. https://www.oxfordlearnersdictionaries.com/definition/english/school_1
 - Lewis, C. T., & Short, C. *A Latin Dictionary*, s.v. “otium” and “negotium.” https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059
@@ -274,6 +273,7 @@ free: true
 - Collette, D., Anson, K., Halabi, N., Schlierman, A., & Suriner, A. (2017). “Handwriting and Common Core State Standards: Teacher, Occupational Therapist, and Administrator Perceptions From New York State Public Schools.” *American Journal of Occupational Therapy*, 71(6), 7106220010p1–7106220010p9. https://doi.org/10.5014/ajot.2017.021808 ／ https://pubmed.ncbi.nlm.nih.gov/29135428/
 - U.S. Department of Education, National Center for Education Statistics. (2007). *Changes in Instructional Hours in Four Subjects by Public School Teachers of Grades 1 Through 4*. https://nces.ed.gov/use-work/resource-library/report/statistics-brief/changes-instructional-hours-four-subjects-public-school-teachers-grades-1-through-4-issue-brief
 - Savage, M. (2026-04-16). “Back to books — Sweden’s schools cutting back on digital learning.” *BBC News*. https://www.bbc.com/news/articles/cly0vk77vdko ／ https://www.bbc.com/japanese/articles/c0kr2x0ey4go
+- 文部科学省. (2026-08-03). 「デジタルな形態を含む教科書の発行・採択等の指針に関する検討会議(第4回)資料4 学力等への効果・影響、諸外国の動向について」. https://www.mext.go.jp/content/202600803-mxt_kyokasyo01-000051369_4.pdf
 - スウェーデン政府. (2023-03-03). “Regeringen gör det möjligt för skolor att söka bidrag för fler läroböcker”（紙・デジタル部分を含む教科書購入補助）. https://www.regeringen.se/pressmeddelanden/2023/03/regeringen-gor-det-mojligt-for-skolor-att-soka-bidrag-for-fler-larobocker/
 - スウェーデン政府. (2026-06-16). “Regeringen genomför reformer för att förbättra elevers läsförmåga och läsning i skolan.” https://www.regeringen.se/pressmeddelanden/2026/06/regeringen-genomfor-reformer-for-att-forbattra-elevers-lasformaga-och-lasning-i-skolan/
 - OECD. (2026). *Education in Sweden: A Diagnostic Review with Analysis of PISA 2022 Results*. https://doi.org/10.1787/9bbbb63d-en ／ https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/education-in-sweden_18b9c025/9bbbb63d-en.pdf
