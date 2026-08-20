@@ -86,7 +86,7 @@ free: true
 ## 第6章　なじみは道になる
 
 - Craske et al. (2014)とBornstein (1989)は第1章、Chinese Text Project『荘子』「斉物論」は序の書誌を参照。
-- Oulasvirta, A., Rattenbury, T., Ma, L., & Raita, E. (2012). “Habits Make Smartphone Use More Pervasive.” *Personal and Ubiquitous Computing*, 16(1), 105–114. https://doi.org/10.1007/s00779-011-0412-2 ／ https://gbppr.net/2600/oulasvirta2011.pdf
+- Oulasvirta, A., Rattenbury, T., Ma, L., & Raita, E. (2012). “Habits Make Smartphone Use More Pervasive.” *Personal and Ubiquitous Computing*, 16(1), 105–114. https://doi.org/10.1007/s00779-011-0412-2 ／ https://research.aalto.fi/en/publications/habits-make-smartphone-use-more-pervasive/
 - Birch, L. L., & Marlin, D. W. (1982). “I Don't Like It; I Never Tried It: Effects of Exposure on Two-Year-Old Children's Food Preferences.” *Appetite*, 3(4), 353–360. https://doi.org/10.1016/S0195-6663(82)80053-6 ／ https://www.sciencedirect.com/science/article/pii/S0195666382800536
 - Fildes, A., van Jaarsveld, C. H. M., Wardle, J., & Cooke, L. (2014). “Parent-Administered Exposure to Increase Children's Vegetable Acceptance: A Randomized Controlled Trial.” *Journal of the Academy of Nutrition and Dietetics*, 114(6), 881–888. https://doi.org/10.1016/j.jand.2013.07.040 ／ https://pmc.ncbi.nlm.nih.gov/articles/PMC4037818/
 - Bowen, D. H., Greene, J. P., & Kisida, B. (2014). “Learning to Think Critically: A Visual Art Experiment.” *Educational Researcher*, 43(1), 37–44. https://doi.org/10.3102/0013189X13512675
@@ -111,7 +111,7 @@ free: true
 
 ## 第8章　「みんなが好き」の宛先
 
-- Eisenberger, N. I., Lieberman, M. D., & Williams, K. D. (2003). “Does Rejection Hurt? An fMRI Study of Social Exclusion.” *Science*, 302(5643), 290–292. https://doi.org/10.1126/science.1089134 ／ https://sanlab.psych.ucla.edu/wp-content/uploads/sites/31/2016/03/Eisenberger-Lieberman-Williams-2003-Science.pdf
+- Eisenberger, N. I., Lieberman, M. D., & Williams, K. D. (2003). “Does Rejection Hurt? An fMRI Study of Social Exclusion.” *Science*, 302(5643), 290–292. https://doi.org/10.1126/science.1089134
 - Sherman, L. E., Payton, A. A., Hernandez, L. M., Greenfield, P. M., & Dapretto, M. (2016). “The Power of the Like in Adolescence.” *Psychological Science*, 27(7), 1027–1035. https://doi.org/10.1177/0956797616645673 ／ https://greenfieldlab.psych.ucla.edu/wp-content/uploads/sites/168/2025/04/sherman-et-al-2016-the-power-of-the-like-in-adolescence-effects-of-peer-influence-on-neural-and-behavioral-responses-to.pdf
 - Girard, R. (1961). *Mensonge romantique et vérité romanesque*. Grasset. 英訳: *Deceit, Desire, and the Novel* (Johns Hopkins University Press, 1965)。https://www.grasset.fr/livre/mensonge-romantique-et-verite-romanesque-9782246040729/ ／ https://www.press.jhu.edu/books/title/1414/deceit-desire-and-novel
 - Berridge, K. C., & Robinson, T. E. (2016). “Liking, Wanting, and the Incentive-Sensitization Theory of Addiction.” *American Psychologist*, 71(8), 670–679. https://doi.org/10.1037/amp0000059 ／ https://sites.lsa.umich.edu/berridge-lab/wp-content/uploads/sites/743/2019/10/2016-Berridge-Robinson-Liking-wanting-IS-theory-of-addiction-Am-Psychol.pdf
@@ -187,7 +187,7 @@ free: true
 - KERIS. (2018). “White Paper on ICT in Education Korea.” https://www.keris.or.kr/whitePaper/2018_study/keris_2018_eng_sample.pdf
 - KERIS. 「디지털교과서(デジタル教科書)」公式アプリ解説。 https://play.google.com/store/apps/details?id=kr.or.keris.dt2018
 - Tyack, D., & Tobin, W. (1994). “The ‘Grammar’ of Schooling: Why Has It Been So Hard to Change?” *American Educational Research Journal*, 31(3), 453–479. https://doi.org/10.3102/00028312031003453
-- National Center on Education and the Economy. “The Grammar of Schooling.” Excerpts and overview of Tyack & Tobin (1994) and related work. https://portal-views.ncee.org/content/cohort16/unit6/assets/pdf/The-Grammar-of-Schooling-v012821.pdf
+- National Center on Education and the Economy. “The Grammar of Schooling.” Excerpts and overview of Tyack & Tobin (1994) and related work. https://portal-views.ncee.org/content/cohort16/unit8/assets/pdf/The-Grammar-of-Schooling-v080822.pdf
 - 文部科学省. 「学習者用デジタル教科書について」. https://www.mext.go.jp/a_menu/shotou/kyoukasho/seido/1407731.htm
 - 文部科学省. (2026). デジタル形態の教科書制度に関する法改正資料. https://www.mext.go.jp/a_menu/shotou/kyoukasho/seido/1407731_00003.htm ／ https://www.mext.go.jp/a_menu/shotou/kyoukasho/seido/mext_03511.html
 - France 24. (2026-01-06). “Back to textbooks: Denmark rolls back digital learning.” https://www.france24.com/en/tv-shows/focus/20260106-back-to-textbooks-denmark-rolls-back-digital-learning
@@ -262,7 +262,7 @@ free: true
 - 森岡孝二. (2004). 「アメリカの労働時間論争と働きすぎの実態」. https://kansai-u.repo.nii.ac.jp/record/8327/files/KU-1100-20041111-13.pdf
 - Jevons, W. S. (1865). *The Coal Question*. Macmillan. https://archive.org/details/bub_gb_gAAKAAAAIAAJ
 - Van Valen, L. (1973). “A New Evolutionary Law.” *Evolutionary Theory*, 1, 1–30. https://www.mn.uio.no/cees/english/services/van-valen/evolutionary-theory/volume-1/vol-1-no-1-pages-1-30-l-van-valen-a-new-evolutionary-law.pdf
-- Barnett, W. P., & Hansen, M. T. (1996). “The Red Queen in Organizational Evolution.” *Strategic Management Journal*, 17(S1), 139–157. https://doi.org/10.1002/smj.4250171010 ／ https://citeseerx.ist.psu.edu/document?doi=89b7114a560ece778bb9b12bfebbf4a86a62fa68&repid=rep1&type=pdf
+- Barnett, W. P., & Hansen, M. T. (1996). “The Red Queen in Organizational Evolution.” *Strategic Management Journal*, 17(S1), 139–157. https://doi.org/10.1002/smj.4250171010
 - Crafts, N. (2022). “The 15-Hour Week: Keynes's Prediction Revisited.” *Economica*, 89(356), 815–829. https://doi.org/10.1111/ecca.12439 ／ https://wrap.warwick.ac.uk/168147/1/WRAP-The-15%E2%80%90hour-week-Keynes%27s-prediction-revisited-Crafts-2022.pdf
 - Gethin, A., & Saez, E. (2025; revised 2026). “Global Working Hours.” NBER Working Paper 34217. https://doi.org/10.3386/w34217
 - Brynjolfsson, E. (2022). “The Turing Trap: The Promise & Peril of Human-Like Artificial Intelligence.” *Dædalus*, 151(2), 272–287. https://doi.org/10.1162/DAED_a_01915
