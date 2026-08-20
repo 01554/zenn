@@ -12,6 +12,7 @@ free: true
 - Grace, K., Sandkühler, J. F., Stewart, H., Weinstein-Raun, B., Thomas, S., Stein-Perlman, Z., Salvatier, J., Brauner, J., & Korzekwa, R. C. (2025). “Thousands of AI Authors on the Future of AI.” *Journal of Artificial Intelligence Research*, 84, Article 9. https://doi.org/10.1613/jair.1.19087 ／ https://arxiv.org/abs/2401.02843
 - Grace, K. (2025-10-31). “FAQ: Expert Survey on Progress in AI Methodology.” *AI Impacts Blog*. https://blog.aiimpacts.org/p/faq-expert-survey-on-progress-in
 - World Economic Forum. (2026-01-20). “The Day after AGI: Two ‘Rock Stars’ of AI on What It Will Mean for Humanity.” Session with Dario Amodei and Demis Hassabis, World Economic Forum Annual Meeting 2026. https://jp.weforum.org/meetings/world-economic-forum-annual-meeting-2026/sessions/the-day-after-agi/ ／ https://www.weforum.org/podcasts/radio-davos/episodes/ai-agi-dario-amodei-demis-hassabis/
+- 金谷治訳注. (1994). 『荘子 第一冊・内篇』ワイド版岩波文庫123、岩波書店. 「斉物論篇 第二」、57–59頁. ISBN 978-4-00-007123-9.
 - Chinese Text Project. *Zhuangzi*, “Discussion on Making All Things Equal.” https://ctext.org/zhuangzi/adjustment-of-controversies
 - Ziporyn, B. (2020). *Zhuangzi: The Complete Writings*. Hackett Publishing. https://hackettpublishing.com/philosophy/asian-philosophy/zhuangzi-the-complete-writings
 
@@ -121,8 +122,11 @@ free: true
 
 ## 第9章　始めたあとも、選び直せる
 
+- 保立道久訳. (2018). 『現代語訳 老子』ちくま新書、筑摩書房. 第十章117頁、第五十一章254頁. ISBN 978-4-480-07145-3.
+- 蜂屋邦夫訳注. (2025). 『老子 大活字版』大活字版岩波文庫、岩波書店. 第十章46頁、第五十一章234–236頁. ISBN 978-4-00-761026-4.
 - Chinese Text Project. *Dao De Jing*, chapters 10 and 51. https://ctext.org/dao-de-jing
 - Ames, R. T., & Hall, D. L. (2003). *Dao De Jing: A Philosophical Translation*. Ballantine Books. https://www.penguinrandomhouse.com/books/3170/dao-de-jing-by-roger-t-ames-and-david-l-hall/
+- Galloway, A. T., Fiorito, L. M., Francis, L. A., & Birch, L. L. (2006). “‘Finish your soup’: Counterproductive effects of pressuring children to eat on intake and affect.” *Appetite*, 46(3), 318–323. https://doi.org/10.1016/j.appet.2006.01.019 ／ https://pmc.ncbi.nlm.nih.gov/articles/PMC2604806/ ／ https://pmc.ncbi.nlm.nih.gov/articles/PMC2604806/pdf/nihms-62738.pdf
 - Crane, J., & Temple, V. (2015). “A Systematic Review of Dropout from Organized Sport among Children and Youth.” *European Physical Education Review*, 21(1), 114–131. https://doi.org/10.1177/1356336X14555294 ／ https://www.researchgate.net/publication/273289197_A_systematic_review_of_dropout_from_organized_sport_among_children_and_youth
 - Evans, P., McPherson, G. E., & Davidson, J. W. (2013). “The Role of Psychological Needs in Ceasing Music and Music Learning Activities.” *Psychology of Music*, 41(5), 600–619. https://doi.org/10.1177/0305735612441736 ／ https://selfdeterminationtheory.org/wp-content/uploads/2021/06/2013_EvansMcPhersonDavidson_Roleof.pdf
 - Romeiser, J. L., Smith, D. M., & Clouston, S. A. P. (2021). “Musical Instrument Engagement across the Life Course and Episodic Memory in Late Life: An Analysis of 60 Years of Longitudinal Data from the Wisconsin Longitudinal Study.” *PLOS ONE*, 16(6), e0253053. https://doi.org/10.1371/journal.pone.0253053
@@ -220,12 +224,15 @@ free: true
 
 ## 第14章　杼がひとりでに布を織るなら
 
-- Aristotle. *Politics*. Translated by H. Rackham. Loeb Classical Library 264. Harvard University Press, 1932. Books I.4, VII.14, VIII.1, VIII.3. https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0058
+- アリストテレス著、三浦洋訳. (2023). 『政治学（上）』光文社古典新訳文庫、光文社. 第1巻第4章、42–43頁. ISBN 978-4-334-75482-2. https://www.hanmoto.com/bd/isbn/9784334754822
+- アリストテレス著、三浦洋訳. (2023). 『政治学（下）』光文社古典新訳文庫、光文社. 第7巻第14–15章・第8巻第3章、314頁、320頁、356–359頁. ISBN 978-4-334-75483-9. https://www.kotensinyaku.jp/books/book381/
+- アリストテレス著、高田三郎訳. (2012). 『ニコマコス倫理学（下）』ワイド版岩波文庫347、岩波書店. 第10巻第7章、225頁. ISBN 978-4-00-007347-9. https://www.hanmoto.com/bd/isbn/9784000073479
+- Aristotle. *Politics*. Translated by H. Rackham. Loeb Classical Library 264. Harvard University Press, 1932. Books I.4, VII.14–15, VIII.1, VIII.3. https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0058
 - Aristotle. *The Nicomachean Ethics*. Translated by H. Rackham. Revised edition. Loeb Classical Library 73. Harvard University Press, 1934. Book X.7. https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0054%3Abekker%20page%3D1177b
 - Liddell, H. G., Scott, R., Jones, H. S., & McKenzie, R. *A Greek-English Lexicon*, 9th ed., s.v. “σχολή.” https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionaries.v1%3Alsj-n101959/
 - Oxford University Press. “school, noun.” *Oxford Advanced Learner's Dictionary*, Word Origin. https://www.oxfordlearnersdictionaries.com/definition/english/school_1
 - Lewis, C. T., & Short, C. *A Latin Dictionary*, s.v. “otium” and “negotium.” https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059
-- 金谷治訳注. 『論語』. 岩波文庫. https://ndlsearch.ndl.go.jp/books/R100000002-I000002845211
+- 金谷治訳注. (2025). 『論語 大活字版』大活字版岩波文庫、岩波書店. 雍也第六・第二十章、117–118頁. ISBN 978-4-00-761014-1.
 - 国立国会図書館レファレンス協同データベース. 「『知之者不如好之者、好之者不如楽之者』の出典と訳」. https://crd.ndl.go.jp/reference/detail?page=ref_view&id=1000243515
 - 「数寄」『精選版 日本国語大辞典』. https://kotobank.jp/word/%E6%95%B0%E5%AF%84-540939
 - Kamen, D. (2013). *Status in Classical Athens*. Princeton University Press. https://doi.org/10.23943/princeton/9780691138138.001.0001 ／ https://www.jstor.org/stable/j.ctt2855c8
