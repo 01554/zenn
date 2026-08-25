@@ -186,8 +186,9 @@ free: true
 - Choi, J.-y. (2025-08-04). “South Korea Pulls Plug on AI Textbooks.” *The Korea Herald*. https://www.koreaherald.com/article/10546695
 - KERIS. (2018). “White Paper on ICT in Education Korea.” https://www.keris.or.kr/whitePaper/2018_study/keris_2018_eng_sample.pdf
 - KERIS. 「디지털교과서(デジタル教科書)」公式アプリ解説。 https://play.google.com/store/apps/details?id=kr.or.keris.dt2018
-- Tyack, D., & Tobin, W. (1994). “The ‘Grammar’ of Schooling: Why Has It Been So Hard to Change?” *American Educational Research Journal*, 31(3), 453–479. https://doi.org/10.3102/00028312031003453
-- National Center on Education and the Economy. “The Grammar of Schooling.” Excerpts and overview of Tyack & Tobin (1994) and related work. https://portal-views.ncee.org/content/cohort16/unit8/assets/pdf/The-Grammar-of-Schooling-v080822.pdf
+- Tyack, D., & Tobin, W. (1994). “The ‘Grammar’ of Schooling: Why Has It Been So Hard to Change?” *American Educational Research Journal*, 31(3), 453–479. https://doi.org/10.3102/00028312031003453 ／ https://www.yumpu.com/en/document/read/35332890/the-grammar-of-schooling-why-has-it-been-so-hard-to-portal （JSTOR版全文画像）
+- Mehta, J. (2022). “Reimagining American Education: Possible Futures: Toward a New Grammar of Schooling.” *Phi Delta Kappan*, 103(5), 54–57. https://doi.org/10.1177/00317217221079980 ／ https://kappanonline.org/possible-futures-new-grammar-0f-schooling-mehta/
+- Martin, M. S. (2025-08-26). “The Grammar of Schooling.” *The Rowland Foundation*. https://therowlandfoundation.org/the-grammar-of-schooling/
 - 文部科学省. 「学習者用デジタル教科書について」. https://www.mext.go.jp/a_menu/shotou/kyoukasho/seido/1407731.htm
 - 文部科学省. (2026). デジタル形態の教科書制度に関する法改正資料. https://www.mext.go.jp/a_menu/shotou/kyoukasho/seido/1407731_00003.htm ／ https://www.mext.go.jp/a_menu/shotou/kyoukasho/seido/mext_03511.html
 - France 24. (2026-01-06). “Back to textbooks: Denmark rolls back digital learning.” https://www.france24.com/en/tv-shows/focus/20260106-back-to-textbooks-denmark-rolls-back-digital-learning

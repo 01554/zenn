@@ -135,4 +135,4 @@ title: "第11章 未来の地図だけでは、学校は変わらない"
 [^11-20]: Tesfaye et al. (2023), “Skærme i skolen skal begrundes pædagogisk”。
 [^11-21]: デンマーク政府 (2024), *Ny aftale om folkeskolen*; CFU Danmark (2025), “De første bøger fra folkeskolens kvalitetsprogram”。
 [^11-22]: デンマーク児童教育省 (2024-02-05)「基礎学校・学童保育における画面利用の勧告」。
-[^11-23]: Tyack & Tobin (1994), “The ‘Grammar’ of Schooling”; NCEE, “The Grammar of Schooling”。四事例へ当てはめた比較は本書のもの。
+[^11-23]: Tyack & Tobin (1994), “The ‘Grammar’ of Schooling”。四事例へ当てはめた比較は本書のもの。
