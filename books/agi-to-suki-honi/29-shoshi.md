@@ -39,8 +39,8 @@ free: true
 - Schooler, J. W., & Engstler-Schooler, T. Y. (1990). “Verbal Overshadowing of Visual Memories: Some Things Are Better Left Unsaid.” *Cognitive Psychology*, 22(1), 36–71. https://doi.org/10.1016/0010-0285(90)90003-M ／ http://wixtedlab.ucsd.edu/publications/Psych%20272/Schooler_Engstler-Schooler_1990.pdf
 - Perfect, T. J., Hunt, L. J., & Harris, C. M. (2002). “Verbal overshadowing in voice recognition.” *Applied Cognitive Psychology*, 16(8), 973–980. https://doi.org/10.1002/acp.920
 - Kitagami, S., Sato, W., & Yoshikawa, S. (2002). “The influence of test-set similarity in verbal overshadowing.” *Applied Cognitive Psychology*, 16(8), 963–972. https://doi.org/10.1002/acp.917 ／ https://watarusato.shin-gen.jp/Kitagami2002AppliedCognitivePsychology.pdf
-- Melcher, J. M., & Schooler, J. W. (2004). “Perceptual and conceptual training mediate the verbal overshadowing effect in an unfamiliar domain.” *Memory & Cognition*, 32(4), 618–631. https://doi.org/10.3758/BF03195853 ／ https://labs.psych.ucsb.edu/schooler/jonathan/sites/labs.psych.ucsb.edu.schooler.jonathan/files/pubs/melcher_schooler_2004_-_perceptual_and_conceptual_expertise.pdf
-- Melcher, J. M., & Schooler, J. W. (1996). “The Misremembrance of Wines Past: Verbal and Perceptual Expertise Differentially Mediate Verbal Overshadowing of Taste Memory.” *Journal of Memory and Language*, 35(2), 231–245. https://doi.org/10.1006/jmla.1996.0013 ／ https://labs.psych.ucsb.edu/schooler/jonathan/sites/labs.psych.ucsb.edu.schooler.jonathan/files/pubs/schooler-wine_tasting.pdf
+- Melcher, J. M., & Schooler, J. W. (2004). “Perceptual and conceptual training mediate the verbal overshadowing effect in an unfamiliar domain.” *Memory & Cognition*, 32(4), 618–631. https://doi.org/10.3758/BF03195853 ／ https://www.researchgate.net/publication/8236929_Perceptual_and_conceptual_training_mediate_the_verbal_overshadowing_effect_in_an_unfamiliar_domain
+- Melcher, J. M., & Schooler, J. W. (1996). “The Misremembrance of Wines Past: Verbal and Perceptual Expertise Differentially Mediate Verbal Overshadowing of Taste Memory.” *Journal of Memory and Language*, 35(2), 231–245. https://doi.org/10.1006/jmla.1996.0013 ／ https://www.researchgate.net/publication/232459041_The_Misremembrance_of_Wines_Past_Verbal_and_Perceptual_Expertise_Differentially_Mediate_Verbal_Overshadowing_of_Taste_Memory
 - Defrasne Ait-Said, E., Maquestiaux, F., & Didierjean, A. (2014). “Verbal Overshadowing of Memories for Fencing Movements Is Mediated by Expertise.” *PLOS ONE*, 9(2), e89276. https://doi.org/10.1371/journal.pone.0089276
 - Alogna, V. K., et al. (2014). “Registered Replication Report: Schooler and Engstler-Schooler (1990).” *Perspectives on Psychological Science*, 9(5), 556–578. https://doi.org/10.1177/1745691614545653 ／ https://journals.sagepub.com/doi/full/10.1177/1745691614545653
 - Chin, J. M., & Schooler, J. W. (2008). “Why Do Words Hurt? Content, Process, and Criterion Shift Accounts of Verbal Overshadowing.” *European Journal of Cognitive Psychology*, 20(3), 396–413. https://doi.org/10.1080/09541440701728623 ／ https://www.researchgate.net/publication/237711904_Why_do_words_hurt_Content_process_and_criterion_shift_accounts_of_verbal_overshadowing
@@ -238,7 +238,7 @@ free: true
 - 「数寄」『精選版 日本国語大辞典』. https://kotobank.jp/word/%E6%95%B0%E5%AF%84-540939
 - Kamen, D. (2013). *Status in Classical Athens*. Princeton University Press. https://doi.org/10.23943/princeton/9780691138138.001.0001 ／ https://www.jstor.org/stable/j.ctt2855c8
 - Trevett, J. (2014). “Review of Deborah Kamen, *Status in Classical Athens*.” *Bryn Mawr Classical Review*, 2014.02.35. https://bmcr.brynmawr.edu/2014/2014.02.35/
-- Blok, J. (2017). *Citizenship in Classical Athens*. Cambridge University Press. https://doi.org/10.1017/9781139017916 ／ https://assets.cambridge.org/97805211/91456/frontmatter/9780521191456_frontmatter.pdf
+- Blok, J. (2017). *Citizenship in Classical Athens*. Cambridge University Press. https://doi.org/10.1017/9781139017916
 - Gray, B. (2018-04-03). “Rezension zu: Josine Blok, *Citizenship in Classical Athens*.” *H-Soz-Kult*. https://www.hsozkult.de/publicationreview/id/reb-26034
 - Lewis, D. M. (2021). “Labor and Employment.” In *The Cambridge Companion to Ancient Athens*, 217–230. Cambridge University Press. https://doi.org/10.1017/9781108614054.016
 - 大栗博司. (2026). 「AIは自然界の基本法則を発見できるか」国際シンポジウム「知の協奏：AI×物理」講演資料. https://ooguri.caltech.edu/documents/34335/%E5%A4%A7%E6%A0%97%E6%9C%80%E7%B5%82%E7%89%88%E7%9F%A5%E3%81%AE%E5%8D%94%E5%A5%8FAI%E7%89%A9%E7%90%86_2026%E5%B9%B43%E6%9C%88.pdf
@@ -269,7 +269,7 @@ free: true
 - Brynjolfsson, E. (2022). “The Turing Trap: The Promise & Peril of Human-Like Artificial Intelligence.” *Dædalus*, 151(2), 272–287. https://doi.org/10.1162/DAED_a_01915
 - United Nations. *Universal Declaration of Human Rights*, Article 24. https://www.un.org/en/about-us/universal-declaration-of-human-rights
 - UNICEF. *Convention on the Rights of the Child*, Articles 12 and 31. https://www.unicef.org/child-rights-convention/convention-text
-- United Nations Committee on the Rights of the Child. (2013). *General Comment No. 17 on the Right of the Child to Rest, Leisure, Play, Recreational Activities, Cultural Life and the Arts*. CRC/C/GC/17. https://www.ohchr.org/en/documents/general-comments-and-recommendations/general-comment-no-17-2013-right-child-rest-leisure
+- United Nations Committee on the Rights of the Child. (2013). *General Comment No. 17 on the Right of the Child to Rest, Leisure, Play, Recreational Activities, Cultural Life and the Arts*. CRC/C/GC/17. https://docstore.ohchr.org/SelfServices/FilesHandler.ashx?enc=QRiqkcFAVJxaxM9z4RHrvsRwtTO7Q4qkoEN%2BRjca9Q2V982uLRBdWbpgoYMbvT4Pdqknp09fLS6h9yZX5blORA%3D%3D
 
 ## 参考資料1　デンマークの失敗
 
@@ -277,7 +277,7 @@ free: true
 - デンマーク政府. (2010). *Faglighed og frihed*. https://regeringen.dk/media/s51bt2n3/faglighed_og_frihed.pdf
 - デンマーク政府・KL・デンマーク地域. (2011). *The Digital Path to Future Welfare: eGovernment Strategy 2011–2015*. https://interoperable-europe.ec.europa.eu/collection/egovernment/document/digital-path-future-welfare
 - World Bank. *Consumer Price Index (2010 = 100): Denmark*. https://data.worldbank.org/indicator/FP.CPI.TOTL?locations=DK
-- Rambøll・Boston Consulting Group. (2014). *Anvendelse af digitale læremidler — effektmåling*. https://jesperbalslev.dk/wp-content/uploads/2020/05/140619-Anvendelse-af-digitale-laeremidler-effektmaaling.pdf
+- Rambøll・Boston Consulting Group. (2014). *Anvendelse af digitale læremidler — effektmåling*. https://jesperbalslev.dk/wp-content/uploads/2020/05/140619-Anvendelse-af-digitale-laeremidler-effektmaaling.pdf?download=1
 - EVA. (2016). *Implementering af digitale læringsplatforme: De første erfaringer*. https://eva.dk/udgivelser/2016/jan/implementering-af-digitale-laeringsplatforme-de-foerste-erfaringer
 - Epinion. (2017; 2018年公表). *Kortlægning af IT-kompetenceudvikling*. https://uvm.dk/aktuelt/publikationer/2018/januar/2017-kortlaegning-af-it-kompetenceudvikling-rapport/ ／ https://uvm.dk/media/fmwlfwzd/171219-kortlaegning-af-it-kompetenceudvikling-rapport-epinion.pdf
 - Aarhus University. (2024). *ICILS 2023 — Hovedresultater*. https://projekter.au.dk/fileadmin/projekter/ICILS/2023/ICILS_2023_-_Hovedresultater_-_A4.pdf
