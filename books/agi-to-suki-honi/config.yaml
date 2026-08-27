@@ -1,7 +1,7 @@
 title: "AGI時代の好き本位体制 子どもの道は、代わりに歩けない"
 summary: "本書は筆者の好きを詰め込んだ縦書き印刷、装丁、表紙と書籍版がメインになっているので、是非書籍版も一度手に取っていただけたら、幸いです。さて、こちらのZennBook版は序章・第1章・あとがき・参考資料1(デンマークのデジタル教育改革の検証)・書誌は無料でご覧いただけます。"
 topics: ["AI", "教育", "子育て", "AGI"]
-published: false
+published: true
 price: 800
 chapters:
   - 00-jo
@@ -21,7 +21,6 @@ chapters:
   - 14-hata-ga-hitorideni-nuno-wo-orunara
   - 16-saishuushou-erabu-kaisuu-wa-herasanai
   - 28-kenkyuu-to-honsho-no-seiri
-  - 26-web-annai
   - 27-denmark-no-shippai
   - 29-shoshi-dai1bu
   - 30-shoshi-dai2bu
