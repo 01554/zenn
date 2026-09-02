@@ -50,7 +50,6 @@ free: true
 
 - Barrett, L. F. (2017). “The Theory of Constructed Emotion: An Active Inference Account of Interoception and Categorization.” *Social Cognitive and Affective Neuroscience*, 12(1), 1–23. https://doi.org/10.1093/scan/nsw154 ／ https://pmc.ncbi.nlm.nih.gov/articles/PMC5390700/
 - Kashdan, T. B., Barrett, L. F., & McKnight, P. E. (2015). “Unpacking Emotion Differentiation: Transforming Unpleasant Experience by Perceiving Distinctions in Negativity.” *Current Directions in Psychological Science*, 24(1), 10–16. https://doi.org/10.1177/0963721414550708 ／ https://affective-science.org/wp-content/uploads/2024/04/kashdan-et-all-unpacking-emotion-differentiation-2015.pdf
-- バレット, リサ・フェルドマン著、高橋洋訳. (2019). 『情動はこうしてつくられる——脳の隠れた働きと構成主義的情動理論』紀伊國屋書店. https://www.kinokuniya.co.jp/f/dsg-01-9784314011693
 - Tesser, A. (1978). “Self-Generated Attitude Change.” In L. Berkowitz (Ed.), *Advances in Experimental Social Psychology*, Vol. 11, 289–338. Academic Press. https://doi.org/10.1016/S0065-2601(08)60010-6 ／ https://www.researchgate.net/publication/279972307_Self-Generated_Attitude_Change
 - Tormala, Z. L., & Petty, R. E. (2004). “Resistance to Persuasion and Attitude Certainty: The Moderating Role of Elaboration.” *Personality and Social Psychology Bulletin*, 30(11), 1446–1457. https://doi.org/10.1177/0146167204264251 ／ https://richardepetty.com/wp-content/uploads/2019/01/2004-pspb-tormalapetty.pdf
 - Barden, J., & Tormala, Z. L. (2014). “Elaboration and Attitude Strength: The New Meta-Cognitive Perspective.” *Social and Personality Psychology Compass*, 8(1), 17–29. https://doi.org/10.1111/spc3.12078
@@ -96,7 +95,7 @@ free: true
 ## 第7章　道が残る
 
 - Chinese Text Project. *Zhuangzi*, “Nourishing the Lord of Life.” https://ctext.org/zhuangzi/nourishing-the-lord-of-life
-- 野村茂夫. (2004). 『老子・荘子 ビギナーズ・クラシックス 中国の古典』角川ソフィア文庫. 「庖丁問答」（養生主編）、174頁. ISBN 9784043675036. https://www.kadokawa.co.jp/product/200202000099/
+- 野村茂夫. (2004). 『老子・荘子 ビギナーズ・クラシックス 中国の古典』角川ソフィア文庫. 「庖丁問答」（養生主篇）、174頁. ISBN 9784043675036. https://www.kadokawa.co.jp/product/200202000099/
 - Tsay, C.-J. (2013). “Sight over sound in the judgment of music performance.” *PNAS*, 110(36), 14580–14585. https://doi.org/10.1073/pnas.1221454110 ／ https://pmc.ncbi.nlm.nih.gov/articles/PMC3767504/
 - Vogt, K., Gutzmann, G., & Kopiez, R. (2026). “When Eyes Outvote Ears: Revisiting Tsay’s Sight-Over-Sound Effect in Music Performance Evaluation.” *Frontiers in Psychology*, 17, 1767475. https://doi.org/10.3389/fpsyg.2026.1767475
 - Melcher & Schooler (1996)は第2章の書誌を参照。

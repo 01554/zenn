@@ -78,7 +78,7 @@ free: true
 - 道路運送車両法（昭和26年法律第185号）. e-Gov法令検索. https://laws.e-gov.go.jp/law/326AC0000000185
 - 製造物責任法（平成6年法律第85号）. e-Gov法令検索. https://laws.e-gov.go.jp/law/406AC0000000085
 
-## 第13章　道を歩いた跡に五感がある
+## 第13章　完成品の外にある値打ち
 
 - Bellaiche, L., Shahi, R., Turpin, M. H., Ragnhildstveit, A., Sprockett, S., Barr, N., Christensen, A., & Seli, P. (2023). “Humans versus AI: Whether and Why We Prefer Human-Created Compared to AI-Created Artwork.” *Cognitive Research: Principles and Implications*, 8, 42. https://doi.org/10.1186/s41235-023-00499-6
 - van Hees, J., Grootswagers, T., Quek, G. L., & Varlet, M. (2025). “Human Perception of Art in the Age of Artificial Intelligence.” *Frontiers in Psychology*, 15, 1497469. https://doi.org/10.3389/fpsyg.2024.1497469
@@ -135,9 +135,9 @@ free: true
 - UNICEF. *Convention on the Rights of the Child*, Articles 12 and 31. https://www.unicef.org/child-rights-convention/convention-text
 - United Nations Committee on the Rights of the Child. (2013). *General Comment No. 17 on the Right of the Child to Rest, Leisure, Play, Recreational Activities, Cultural Life and the Arts*. CRC/C/GC/17. https://docstore.ohchr.org/SelfServices/FilesHandler.ashx?enc=QRiqkcFAVJxaxM9z4RHrvsRwtTO7Q4qkoEN%2BRjca9Q2V982uLRBdWbpgoYMbvT4Pdqknp09fLS6h9yZX5blORA%3D%3D
 
-## 参考資料1　デンマークの失敗
+## 「デンマークの失敗」
 
-- 第11章と共通する資料は、第11章の書誌を参照。以下には参考資料1だけで使った資料を挙げる。
+- 第11章と共通する資料は、第11章の書誌を参照。以下には「デンマークの失敗」だけで使った資料を挙げます。
 - デンマーク政府. (2010). *Faglighed og frihed*. https://regeringen.dk/media/s51bt2n3/faglighed_og_frihed.pdf
 - デンマーク政府・KL・デンマーク地域. (2011). *The Digital Path to Future Welfare: eGovernment Strategy 2011–2015*. https://interoperable-europe.ec.europa.eu/collection/egovernment/document/digital-path-future-welfare
 - World Bank. *Consumer Price Index (2010 = 100): Denmark*. https://data.worldbank.org/indicator/FP.CPI.TOTL?locations=DK
