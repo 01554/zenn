@@ -104,7 +104,7 @@ free: true
 
 生徒向けの画面利用の設問ではデジタル教材で理解が進んだか、自分に合う問題が出たか、読み書きの困難が軽減されたのか、共同制作へ参加しやすくなったかを一問もたずねていません。
 
-たずねたのは利用時間、使った種類、気が散った頻度です。[^27-17]僕はアンケートの専門家ではないので、よくわかりませんが、違和感を拭えない設問です、悪い答えへ誘導した設問とはいいませんが。悪い面だけを数えた設問で、良い面を数える設問が無いようにみえるからです。
+たずねたのは利用時間、使った種類、気が散った頻度です。[^27-17]僕はアンケートの専門家ではないので、よくわかりませんが、違和感を拭えない設問です。悪い答えへ誘導した設問とはいいません。悪い面だけを数えた設問で、良い面を数える設問が無いようにみえるからです。
 
 学校パネル調査は子どもの利用実態と本人が感じたお気持ちを記述する資料としては使えますが、デジタル教育の成否を判断する資料としては疑問を感じるところです。
 
@@ -180,7 +180,7 @@ free: true
 
 ## スウェーデンとの違い
 
-紙を増やす政策はデンマークだけではありません。スウェーデン政府も2023年から2026年まで、紙の教科書などを増やす補助へ合計二十六億クローナを超える予算(約三百十億円)を付けました。政府は一教科につき一人一冊の教科書を目標にしています。[^27-31]
+紙を増やす政策はデンマークだけではありません。スウェーデン政府も2023年から2026年まで、紙の教科書などを増やす補助へ合計二十六億クローナを超える予算(2026年の日本の物価に直すと約二百九十億円)を付けました。政府は一教科につき一人一冊の教科書を目標にしています。[^27-31]
 
 ただし、この予算の掲げた目的はデンマークとは違います。スウェーデンもデンマークと同じく日本の検定のような教科書の質を保証する仕組みがなく、なんと、広告の入った教材が学校で使われた事例が問題になっていました。
 
@@ -252,7 +252,7 @@ OECDが求めたのは授業での使い方を明確にし、先生の研修を�
 [^27-28]: Common Core State Standards, “CCSS.ELA-LITERACY.W.4.6”。
 [^27-29]: Collette et al. (2017), “Handwriting and Common Core State Standards”。
 [^27-30]: U.S. NCES (2007), *Changes in Instructional Hours in Four Subjects*。
-[^27-31]: スウェーデン政府 (2023), “Regeringen gör det möjligt för skolor att söka bidrag för fler läroböcker”; 同政府 (2026), “Regeringen genomför reformer för att förbättra elevers läsförmåga”。
+[^27-31]: スウェーデン政府 (2023), “Regeringen gör det möjligt för skolor att söka bidrag för fler läroböcker”; 同政府 (2026), “Regeringen genomför reformer för att förbättra elevers läsförmåga”; IMF, *World Economic Outlook Database*。
 [^27-32]: 文部科学省 (2026-08-03)「学力等への効果・影響、諸外国の動向について」; スウェーデン政府 (2023), “Regeringen gör det möjligt för skolor att söka bidrag för fler läroböcker”。
 [^27-33]: OECD (2026), *Education in Sweden: A Diagnostic Review*。
 [^27-34]: Savage (2026), “Back to Books — Sweden’s Schools Cutting Back on Digital Learning”。
